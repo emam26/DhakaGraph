@@ -3,7 +3,8 @@
 [![DhakaGraph interactive network explorer preview](outputs/maps/network_explorer_desktop.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
 
 **[Open the live road-network explorer →](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)** ·
-**[Explore the Overture urban layers →](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)**
+**[Explore the Overture urban layers →](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)** ·
+**[Open the Urban Function Atlas →](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)**
 
 DhakaGraph is a learning-oriented exploration of Dhaka as a spatial graph. The
 project begins with roads and intersections, then adds places, public transport,
@@ -25,6 +26,8 @@ connectivity; they are not measurements of live Dhaka traffic or footfall.
 - Load six Overture feature themes over the same fixed polygon and audit coverage.
 - Split Overture road segments at connectors and export a second graph-ready network.
 - Publish a layer-controlled Overture explorer and a four-panel visual summary.
+- Describe Dhaka through a connected graph of 750 m analytical cells.
+- Publish a transparent PCA/K-Means urban-function baseline with switchable metrics.
 - Keep all network-dependent work outside the unit tests.
 
 ## Setup on Windows
@@ -82,17 +85,39 @@ features. Processing the road segments at Overture connectors produces 43,330
 graph nodes and 57,108 edges. Counts refer to mapped features, not people, visits,
 or traffic volume.
 
+## Run the urban studies
+
+```powershell
+dhakagraph-urban
+```
+
+Stage 1 divides the study polygon into 643 clipped 750 m cells and connects them
+with City2Graph queen contiguity. Each cell receives building, POI, land-use,
+road, intersection, service-distance and cell-centrality features. A reproducible
+seven-cluster PCA/K-Means baseline then describes recurring combinations of those
+mapped characteristics.
+
+[![Dhaka Urban Function Atlas preview](outputs/maps/urban_atlas_preview.png)](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)
+
+These clusters are exploratory descriptions, not administrative neighborhoods,
+official land-use classes or evidence of observed human activity. Sparse or
+constant variables are recorded and excluded from clustering rather than allowed
+to create misleading one-cell classes.
+
 ## Outputs
 
 The latest expanded Dhaka pilot snapshot is available online:
 
 - [Explore the dynamic network dashboard](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
 - [Explore Overture buildings, places, roads, land use, and water](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)
+- [Explore the 750 m Dhaka Urban Function Atlas](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)
 - [Open the interactive centrality map](https://emam26.github.io/DhakaGraph/outputs/maps/centrality_map.html)
 - [View the full-size static map](outputs/maps/centrality_preview.png)
 - [View the Overture four-panel preview](outputs/maps/overture_preview.png)
 - [Read the network summary](outputs/tables/network_summary.json)
 - [Read the Overture summary](outputs/tables/overture_summary.json)
+- [Read the urban-atlas methodology and summary](outputs/tables/urban_atlas_summary.json)
+- [Download the urban cell feature table](outputs/tables/urban_atlas_cells.csv)
 - [Inspect the Overture layer audit](outputs/tables/overture_layer_audit.csv)
 - [Browse Overture POI and land-use rankings](outputs/tables/overture_poi_categories.csv)
 - [Read the extended network profile](outputs/tables/network_profile.json)
@@ -125,6 +150,10 @@ outputs/tables/overture_summary.json
 outputs/tables/overture_layer_audit.csv
 outputs/tables/overture_poi_categories.csv
 outputs/tables/overture_land_use_classes.csv
+outputs/maps/urban_atlas.html
+outputs/maps/urban_atlas_preview.png
+outputs/tables/urban_atlas_summary.json
+outputs/tables/urban_atlas_cells.csv
 ```
 
 The published maps, previews, and summaries are versioned as a reproducible pilot

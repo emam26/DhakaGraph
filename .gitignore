@@ -22,6 +22,8 @@ outputs/maps/*
 !outputs/maps/network_explorer_desktop.png
 !outputs/maps/overture_explorer.html
 !outputs/maps/overture_preview.png
+!outputs/maps/urban_atlas.html
+!outputs/maps/urban_atlas_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
@@ -31,4 +33,6 @@ outputs/tables/*
 !outputs/tables/overture_layer_audit.csv
 !outputs/tables/overture_poi_categories.csv
 !outputs/tables/overture_land_use_classes.csv
+!outputs/tables/urban_atlas_cells.csv
+!outputs/tables/urban_atlas_summary.json
 

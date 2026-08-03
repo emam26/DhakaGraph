@@ -1,0 +1,90 @@
+{
+  "cell_count": 643,
+  "cell_size_m": 750,
+  "classification": {
+    "cluster_count": 7,
+    "cluster_descriptors": {
+      "1": "market-distant / service-light",
+      "2": "recreation/culture-rich / transport-POI-rich",
+      "3": "building-dense / limited recreation POIs",
+      "4": "road-sparse / intersection-sparse",
+      "5": "limited retail / low building coverage",
+      "6": "high building coverage / retail-rich",
+      "7": "residential land use / road-dense"
+    },
+    "excluded_sparse_or_constant_features": [
+      "landuse_transport_share"
+    ],
+    "feature_columns": [
+      "building_footprint_share",
+      "building_density_km2",
+      "road_density_km_km2",
+      "intersection_density_km2",
+      "poi_density_km2",
+      "poi_healthcare_density_km2",
+      "poi_education_density_km2",
+      "poi_food_drink_density_km2",
+      "poi_retail_markets_density_km2",
+      "poi_transport_density_km2",
+      "poi_civic_religious_density_km2",
+      "poi_recreation_culture_density_km2",
+      "landuse_residential_share",
+      "landuse_commercial_share",
+      "landuse_industrial_share",
+      "landuse_institutional_share",
+      "landuse_green_share",
+      "cell_degree_centrality",
+      "cell_betweenness_centrality",
+      "distance_healthcare_m",
+      "distance_education_m",
+      "distance_market_m",
+      "distance_park_m",
+      "distance_transport_m"
+    ],
+    "method": "StandardScaler + PCA (visualization) + K-Means",
+    "pca_explained_variance": [
+      0.6047,
+      0.0612
+    ],
+    "random_seed": 42
+  },
+  "connected_components": 1,
+  "contiguity_edges": 2415,
+  "contiguity_method": "City2Graph queen contiguity",
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation",
+  "interpretation": "Exploratory cell classes derived from mapped Overture and road-network features. They are not administrative neighborhoods or ground-truth land-use labels.",
+  "overture_release": "2026-07-22.0",
+  "represented_area_km2": 337.651,
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "study_area_slug": "airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+  "urban_class_counts": [
+    {
+      "cells": 64,
+      "urban_class": "Cluster 1 \u00b7 market-distant / service-light"
+    },
+    {
+      "cells": 111,
+      "urban_class": "Cluster 2 \u00b7 recreation/culture-rich / transport-POI-rich"
+    },
+    {
+      "cells": 115,
+      "urban_class": "Cluster 3 \u00b7 building-dense / limited recreation POIs"
+    },
+    {
+      "cells": 73,
+      "urban_class": "Cluster 4 \u00b7 road-sparse / intersection-sparse"
+    },
+    {
+      "cells": 131,
+      "urban_class": "Cluster 5 \u00b7 limited retail / low building coverage"
+    },
+    {
+      "cells": 127,
+      "urban_class": "Cluster 6 \u00b7 high building coverage / retail-rich"
+    },
+    {
+      "cells": 22,
+      "urban_class": "Cluster 7 \u00b7 residential land use / road-dense"
+    }
+  ]
+}

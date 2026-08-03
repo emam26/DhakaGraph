@@ -24,6 +24,11 @@ road geometries remains a future comparison task.
 Attach hospitals, universities, schools, markets, parks, and stations to the
 road graph. Produce distance-based accessibility summaries and isochrones.
 
+Status: the Stage 1 urban-function foundation is complete. It aggregates mapped
+places, land use, buildings, roads, intersections, straight-line service
+distances and contiguity centrality into 643 reproducible 750 m cells. The next
+ordered stage adds road-network walking accessibility and service-desert metrics.
+
 ## Milestone 4: public transport
 
 Audit available Dhaka bus and MRT data. Only use City2Graph's GTFS travel graph

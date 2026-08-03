@@ -13,8 +13,12 @@ dependencies = [
     "folium>=0.19,<1.0",
     "geopandas>=1.0,<2.0",
     "matplotlib>=3.10,<4.0",
+    "networkx>=3.4,<4.0",
+    "numpy>=2.0,<3.0",
     "osmnx>=2.0.3,<3.0.0",
     "overturemaps>=1.0,<2.0",
+    "pandas>=2.2,<4.0",
+    "scikit-learn>=1.6,<2.0",
     "shapely>=2.0,<3.0",
 ]
 
@@ -27,6 +31,7 @@ dev = [
 [project.scripts]
 dhakagraph-pilot = "dhakagraph.pipeline:main"
 dhakagraph-overture = "dhakagraph.overture_pipeline:main"
+dhakagraph-urban = "dhakagraph.urban_pipeline:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dhakagraph"]
