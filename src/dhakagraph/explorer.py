@@ -369,7 +369,7 @@ def build_network_explorer(
     <div>
       <p class="dg-eyebrow">DHAKAGRAPH / OSM + CITY2GRAPH</p>
       <h1>Network explorer</h1>
-      <p>Airport · Uttara · Mirpur · Sayedabad</p>
+      <p>Uttara · Mirpur · Gulshan/Badda/Bashundhara · Sayedabad</p>
     </div>
     <button id="dg-collapse" type="button" aria-expanded="true" aria-label="Collapse explorer">−</button>
   </header>

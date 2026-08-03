@@ -5,10 +5,10 @@ project begins with roads and intersections, then adds places, public transport,
 and flood scenarios as the underlying data are audited.
 
 The default milestone builds a drive network across a fixed polygon from Uttara
-and the Airport south to Sayedabad, with Mirpur included to the west. It converts
-the network through City2Graph, calculates structural network metrics, and writes
-an interactive map. These metrics describe map connectivity; they are not
-measurements of live Dhaka traffic.
+and the Airport south to Sayedabad. It includes Mirpur to the west and Gulshan,
+Badda, and Bashundhara to the east. It converts the network through City2Graph,
+calculates structural network metrics, and writes interactive maps. These metrics
+describe map connectivity; they are not measurements of live Dhaka traffic.
 
 ## Current milestone
 
@@ -45,11 +45,12 @@ dhakagraph-pilot --refresh
 dhakagraph-pilot --area shahbag --radius 1500
 ```
 
-The default `expanded` area uses a checked-in polygon that contains Airport,
-Uttara, Mirpur, and Sayedabad anchors. The original 2.5 km Shahbag pilot remains
-available with `--area shahbag`. The first run needs internet access to query
-OpenStreetMap; later runs reuse the cached GraphML file unless `--refresh` is
-supplied. See [docs/STUDY_AREA.md](docs/STUDY_AREA.md) for the boundary definition.
+The default `expanded` area uses a checked-in polygon containing Airport, Uttara,
+Mirpur, Gulshan, Badda, Bashundhara, and Sayedabad anchors. The original 2.5 km
+Shahbag pilot remains available with `--area shahbag`. The first run needs internet
+access to query OpenStreetMap; later runs reuse the cached GraphML file unless
+`--refresh` is supplied. See [docs/STUDY_AREA.md](docs/STUDY_AREA.md) for the
+boundary definition.
 
 ## Outputs
 
@@ -70,9 +71,9 @@ illustrative Uttara-Airport-Mirpur-Sayedabad shortest-distance graph connection.
 ![Expanded Dhaka road-network centrality preview](outputs/maps/centrality_preview.png)
 
 ```text
-data/raw/airport_uttara_mirpur_sayedabad_drive.graphml
-data/processed/airport_uttara_mirpur_sayedabad_nodes.geojson
-data/processed/airport_uttara_mirpur_sayedabad_edges.geojson
+data/raw/airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad_drive.graphml
+data/processed/airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad_nodes.geojson
+data/processed/airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad_edges.geojson
 outputs/tables/network_summary.json
 outputs/tables/network_profile.json
 outputs/tables/top_intersections.csv

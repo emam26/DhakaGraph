@@ -2,8 +2,8 @@ import pytest
 from shapely.geometry import Point
 
 from dhakagraph.config import (
-    AIRPORT_UTTARA_MIRPUR_SAYEDABAD,
     CENTRAL_DHAKA_PILOT,
+    EXPANDED_DHAKA_STUDY,
     StudyArea,
 )
 
@@ -19,10 +19,18 @@ def test_radius_must_be_positive() -> None:
 
 
 def test_expanded_area_contains_requested_anchors() -> None:
-    geometry = AIRPORT_UTTARA_MIRPUR_SAYEDABAD.geometry
+    geometry = EXPANDED_DHAKA_STUDY.geometry
     assert geometry is not None
-    anchors = AIRPORT_UTTARA_MIRPUR_SAYEDABAD.anchors_lon_lat
-    assert {label for label, _, _ in anchors} == {"Airport", "Uttara", "Mirpur", "Sayedabad"}
+    anchors = EXPANDED_DHAKA_STUDY.anchors_lon_lat
+    assert {label for label, _, _ in anchors} == {
+        "Airport",
+        "Uttara",
+        "Mirpur",
+        "Gulshan",
+        "Badda",
+        "Bashundhara",
+        "Sayedabad",
+    }
     assert all(geometry.covers(Point(lon, lat)) for _, lon, lat in anchors)
 
 

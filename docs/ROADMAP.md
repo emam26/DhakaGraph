@@ -3,9 +3,9 @@
 ## Milestone 1: expanded Dhaka road pilot
 
 Build, cache, inspect, and map the drive network from Airport and Uttara to
-Sayedabad while covering Mirpur. Keep the original Shahbag radius as a smaller
-test area. Use structural graph metrics only and label them clearly as
-non-traffic results.
+Sayedabad while covering Mirpur, Gulshan, Badda, and Bashundhara. Keep the
+original Shahbag radius as a smaller test area. Use structural graph metrics only
+and label them clearly as non-traffic results.
 
 ## Milestone 2: OSM versus Overture audit
 

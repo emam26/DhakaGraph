@@ -83,17 +83,19 @@ CENTRAL_DHAKA_PILOT = StudyArea(
 )
 
 
-AIRPORT_UTTARA_MIRPUR_SAYEDABAD = StudyArea(
-    slug="airport_uttara_mirpur_sayedabad",
-    name="Airport-Uttara-Mirpur-Sayedabad expanded study area",
+EXPANDED_DHAKA_STUDY = StudyArea(
+    slug="airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+    name="Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
     center_lat=23.798,
-    center_lon=90.385,
+    center_lon=90.398,
     polygon_lon_lat=(
         (90.312, 23.765),
         (90.312, 23.840),
         (90.338, 23.900),
-        (90.442, 23.900),
-        (90.442, 23.695),
+        (90.470, 23.900),
+        (90.486, 23.815),
+        (90.478, 23.755),
+        (90.455, 23.695),
         (90.398, 23.695),
         (90.352, 23.730),
     ),
@@ -101,14 +103,20 @@ AIRPORT_UTTARA_MIRPUR_SAYEDABAD = StudyArea(
         ("Airport", 90.4053032, 23.8431441),
         ("Uttara", 90.3926893, 23.8693275),
         ("Mirpur", 90.3640891, 23.8123629),
+        ("Gulshan", 90.4138705, 23.7948921),
+        ("Badda", 90.4463012, 23.7765425),
+        ("Bashundhara", 90.4368229, 23.8189265),
         ("Sayedabad", 90.4275444, 23.7153498),
     ),
     centrality_samples=300,
     top_n=50,
 )
 
+# Backward-compatible name retained for notebooks built against the first expanded pilot.
+AIRPORT_UTTARA_MIRPUR_SAYEDABAD = EXPANDED_DHAKA_STUDY
+
 
 STUDY_AREAS = {
-    "expanded": AIRPORT_UTTARA_MIRPUR_SAYEDABAD,
+    "expanded": EXPANDED_DHAKA_STUDY,
     "shahbag": CENTRAL_DHAKA_PILOT,
 }
