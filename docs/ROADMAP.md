@@ -13,6 +13,12 @@ Compare road, building, place, water, and land-use coverage over the same pilot
 boundary. Record feature counts, missing attributes, geometry validity, and
 download date before selecting a source per layer.
 
+Status: the Overture baseline was implemented on 2026-08-04 with release
+`2026-07-22.0`. Six feature themes, a connector-split road graph, a layer audit,
+ranked place and land-use categories, a static overview, and an interactive map
+are published. A direct spatial mismatch analysis between the OSM and Overture
+road geometries remains a future comparison task.
+
 ## Milestone 3: places and accessibility
 
 Attach hospitals, universities, schools, markets, parks, and stations to the

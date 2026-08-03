@@ -2,8 +2,9 @@
 
 The default study is a fixed polygon designed to cover the requested
 Airport-Uttara-Sayedabad north-south span, all of Mirpur, and the eastern
-Gulshan-Badda-Bashundhara area. A fixed polygon makes repeated OpenStreetMap
-downloads comparable and avoids relying on changing place-name search boundaries.
+Gulshan-Badda-Bashundhara area. The same polygon is used for OpenStreetMap and
+Overture Maps, which makes repeated downloads and source comparisons reproducible
+without relying on changing place-name search boundaries.
 
 ## Requested anchors
 
@@ -41,4 +42,5 @@ OSMnx.
 
 The boundary intentionally includes a modest margin around the named anchors.
 It is a project study boundary, not an administrative definition of Dhaka or
-any included neighborhood.
+any included neighborhood. It is retained for clipping and reproducibility but
+is not drawn as a dashed overlay on the published maps.
