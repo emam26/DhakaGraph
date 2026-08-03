@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dhakagraph"
+version = "0.1.0"
+description = "A practical graph-based exploration of roads, places, transport, and resilience in Dhaka."
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "city2graph>=1.0.0,<2.0.0",
+    "folium>=0.19,<1.0",
+    "matplotlib>=3.10,<4.0",
+    "osmnx>=2.0.3,<3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9.0",
+    "ruff>=0.12,<1.0",
+]
+
+[project.scripts]
+dhakagraph-pilot = "dhakagraph.pipeline:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dhakagraph"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
