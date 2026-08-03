@@ -11,8 +11,10 @@ requires-python = ">=3.12,<3.15"
 dependencies = [
     "city2graph>=1.0.0,<2.0.0",
     "folium>=0.19,<1.0",
+    "geopandas>=1.0,<2.0",
     "matplotlib>=3.10,<4.0",
     "osmnx>=2.0.3,<3.0.0",
+    "overturemaps>=1.0,<2.0",
     "shapely>=2.0,<3.0",
 ]
 
@@ -24,6 +26,7 @@ dev = [
 
 [project.scripts]
 dhakagraph-pilot = "dhakagraph.pipeline:main"
+dhakagraph-overture = "dhakagraph.overture_pipeline:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dhakagraph"]

@@ -232,8 +232,10 @@ source = { editable = "." }
 dependencies = [
     { name = "city2graph" },
     { name = "folium" },
+    { name = "geopandas" },
     { name = "matplotlib" },
     { name = "osmnx" },
+    { name = "overturemaps" },
     { name = "shapely" },
 ]
 
@@ -247,8 +249,10 @@ dev = [
 requires-dist = [
     { name = "city2graph", specifier = ">=1.0.0,<2.0.0" },
     { name = "folium", specifier = ">=0.19,<1.0" },
+    { name = "geopandas", specifier = ">=1.0,<2.0" },
     { name = "matplotlib", specifier = ">=3.10,<4.0" },
     { name = "osmnx", specifier = ">=2.0.3,<3.0.0" },
+    { name = "overturemaps", specifier = ">=1.0,<2.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3,<9.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.12,<1.0" },
     { name = "shapely", specifier = ">=2.0,<3.0" },
