@@ -234,6 +234,7 @@ dependencies = [
     { name = "folium" },
     { name = "matplotlib" },
     { name = "osmnx" },
+    { name = "shapely" },
 ]
 
 [package.optional-dependencies]
@@ -250,6 +251,7 @@ requires-dist = [
     { name = "osmnx", specifier = ">=2.0.3,<3.0.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3,<9.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.12,<1.0" },
+    { name = "shapely", specifier = ">=2.0,<3.0" },
 ]
 provides-extras = ["dev"]
 

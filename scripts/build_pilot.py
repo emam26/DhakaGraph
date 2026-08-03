@@ -1,4 +1,4 @@
-"""Run the central-Dhaka pilot directly from a source checkout."""
+"""Run the Dhaka road-network study directly from a source checkout."""
 
 from dhakagraph.pipeline import main
 

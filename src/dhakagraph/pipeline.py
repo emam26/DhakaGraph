@@ -1,4 +1,4 @@
-"""Command-line pipeline for the first central-Dhaka pilot."""
+"""Command-line pipeline for the Dhaka road-network study."""
 
 import argparse
 import csv
@@ -13,7 +13,7 @@ from dhakagraph.analysis import (
     rank_intersections,
     to_simple_undirected,
 )
-from dhakagraph.config import CENTRAL_DHAKA_PILOT
+from dhakagraph.config import STUDY_AREAS
 from dhakagraph.maps import build_centrality_map, build_static_preview
 from dhakagraph.osm import city2graph_frames, export_spatial_layers, load_or_download_graph
 
@@ -41,17 +41,24 @@ def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def build_pilot(
     *,
+    area_key: str = "expanded",
     refresh: bool = False,
     radius: int | None = None,
     samples: int | None = None,
     top_n: int | None = None,
 ) -> dict[str, Path]:
     """Execute the complete first milestone and return its output paths."""
+    if area_key not in STUDY_AREAS:
+        choices = ", ".join(sorted(STUDY_AREAS))
+        raise ValueError(f"unknown study area {area_key!r}; choose from: {choices}")
+    base_area = STUDY_AREAS[area_key]
+    if radius is not None and base_area.radius_m is None:
+        raise ValueError("--radius can only be used with the Shahbag point-radius area")
     area = replace(
-        CENTRAL_DHAKA_PILOT,
-        radius_m=radius or CENTRAL_DHAKA_PILOT.radius_m,
-        centrality_samples=samples or CENTRAL_DHAKA_PILOT.centrality_samples,
-        top_n=top_n or CENTRAL_DHAKA_PILOT.top_n,
+        base_area,
+        radius_m=radius or base_area.radius_m,
+        centrality_samples=samples or base_area.centrality_samples,
+        top_n=top_n or base_area.top_n,
     )
     root = project_root()
     raw_dir = root / "data" / "raw"
@@ -65,15 +72,24 @@ def build_pilot(
 
     analysis_graph = to_simple_undirected(graph)
     summary = graph_summary(graph, analysis_graph)
+    area_summary: dict[str, Any] = {
+        "study_area": area.name,
+        "study_area_slug": area.slug,
+        "selection_method": area.selection_method,
+        "center_lat": area.center_lat,
+        "center_lon": area.center_lon,
+    }
+    if area.radius_m is not None:
+        area_summary["radius_m"] = area.radius_m
+    if area.geometry is not None:
+        west, south, east, north = area.geometry.bounds
+        area_summary["polygon_bounds_lon_lat"] = [west, south, east, north]
     summary.update(
-        {
-            "study_area": area.name,
-            "center_lat": area.center_lat,
-            "center_lon": area.center_lon,
-            "radius_m": area.radius_m,
+        area_summary
+        | {
             "centrality_method": "length-weighted sampled node betweenness",
             "centrality_samples": min(area.centrality_samples, analysis_graph.number_of_nodes()),
-            "data_attribution": "© OpenStreetMap contributors, ODbL",
+            "data_attribution": "\u00a9 OpenStreetMap contributors, ODbL",
             "city2graph_nodes": len(nodes),
             "city2graph_edges": len(edges),
         }
@@ -107,6 +123,12 @@ def build_pilot(
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--area",
+        choices=sorted(STUDY_AREAS),
+        default="expanded",
+        help="study area to analyze (default: expanded)",
+    )
     parser.add_argument("--refresh", action="store_true", help="redownload OSM data")
     parser.add_argument("--radius", type=int, help="pilot radius in metres")
     parser.add_argument("--centrality-samples", type=int, dest="samples")
@@ -118,6 +140,7 @@ def main() -> None:
     """Run the CLI."""
     args = _parser().parse_args()
     outputs = build_pilot(
+        area_key=args.area,
         refresh=args.refresh,
         radius=args.radius,
         samples=args.samples,

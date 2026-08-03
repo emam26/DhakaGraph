@@ -24,7 +24,7 @@ def load_or_download_graph(
     *,
     refresh: bool = False,
 ) -> tuple[nx.MultiDiGraph, Path]:
-    """Load a cached graph or download a fresh point-centered OSM network."""
+    """Load a cached graph or download a fresh OSM network for the study area."""
     raw_dir.mkdir(parents=True, exist_ok=True)
     graph_path = raw_dir / f"{area.slug}_{area.network_type}.graphml"
     configure_osmnx(raw_dir / "osmnx_cache")
@@ -33,16 +33,28 @@ def load_or_download_graph(
         graph = ox.io.load_graphml(graph_path)
         return graph, graph_path
 
-    graph = ox.graph.graph_from_point(
-        area.center,
-        dist=area.radius_m,
-        network_type=area.network_type,
-        simplify=True,
-        retain_all=False,
-    )
+    if area.geometry is not None:
+        graph = ox.graph.graph_from_polygon(
+            area.geometry,
+            network_type=area.network_type,
+            simplify=True,
+            retain_all=False,
+        )
+    else:
+        graph = ox.graph.graph_from_point(
+            area.center,
+            dist=area.radius_m,
+            network_type=area.network_type,
+            simplify=True,
+            retain_all=False,
+        )
     graph.graph["dhakagraph_study_area"] = area.name
     graph.graph["dhakagraph_center"] = area.center
-    graph.graph["dhakagraph_radius_m"] = area.radius_m
+    graph.graph["dhakagraph_selection_method"] = area.selection_method
+    if area.radius_m is not None:
+        graph.graph["dhakagraph_radius_m"] = area.radius_m
+    if area.geometry is not None:
+        graph.graph["dhakagraph_polygon_wkt"] = area.geometry.wkt
     ox.io.save_graphml(graph, graph_path)
     return graph, graph_path
 

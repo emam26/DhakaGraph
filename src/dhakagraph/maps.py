@@ -4,9 +4,11 @@ from pathlib import Path
 from typing import Any
 
 import folium
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import networkx as nx
 import osmnx as ox
+from shapely.geometry import Point
 
 from dhakagraph.config import StudyArea
 
@@ -27,11 +29,38 @@ def build_centrality_map(
 ) -> Path:
     """Render the road network and its most central intersections to HTML."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    map_object = folium.Map(location=list(area.center), zoom_start=13, tiles=None)
+    map_object = folium.Map(location=list(area.center), zoom_start=11, tiles=None)
     folium.TileLayer("CartoDB positron", name="Light basemap", control=True).add_to(map_object)
     folium.TileLayer("OpenStreetMap", name="OpenStreetMap", control=True).add_to(map_object)
 
     edges = ox.convert.graph_to_gdfs(graph, nodes=False, edges=True)
+    nodes = ox.convert.graph_to_gdfs(graph, nodes=True, edges=False)
+    west, south, east, north = nodes.total_bounds
+    map_object.fit_bounds([[south, west], [north, east]])
+
+    if area.geometry is not None:
+        folium.GeoJson(
+            area.geometry.__geo_interface__,
+            name="Study boundary",
+            style_function=lambda _feature: {
+                "color": "#2166ac",
+                "weight": 2,
+                "opacity": 0.8,
+                "fillOpacity": 0.0,
+                "dashArray": "6 4",
+            },
+        ).add_to(map_object)
+
+    if area.anchors_lon_lat:
+        anchor_layer = folium.FeatureGroup(name="Requested place anchors", show=True)
+        for label, longitude, latitude in area.anchors_lon_lat:
+            folium.Marker(
+                location=[latitude, longitude],
+                tooltip=label,
+                popup=f"Requested study-area anchor: {label}",
+                icon=folium.Icon(color="blue", icon="info-sign"),
+            ).add_to(anchor_layer)
+        anchor_layer.add_to(map_object)
     road_layer = folium.FeatureGroup(name="OSM drive network", show=True)
     folium.GeoJson(
         edges[["geometry"]].to_json(),
@@ -67,12 +96,15 @@ def build_centrality_map(
         "<div style='position:fixed;top:10px;left:50px;z-index:9999;background:white;"
         "padding:8px 12px;border:1px solid #777;font:14px sans-serif'>"
         f"<b>DhakaGraph</b><br>{area.name}<br>"
-        "Structural centrality—not live traffic"
+        "Structural centrality&mdash;not live traffic"
         "</div>"
     )
     map_object.get_root().html.add_child(folium.Element(title))
     folium.LayerControl(collapsed=False).add_to(map_object)
     map_object.save(output_path)
+    rendered_html = output_path.read_text(encoding="utf-8")
+    normalized_html = "\n".join(line.rstrip() for line in rendered_html.splitlines()) + "\n"
+    output_path.write_text(normalized_html, encoding="utf-8")
     return output_path
 
 
@@ -86,8 +118,35 @@ def build_static_preview(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     edges = ox.convert.graph_to_gdfs(graph, nodes=False, edges=True).to_crs(epsg=32646)
 
-    figure, axis = plt.subplots(figsize=(10, 10), dpi=160)
+    figure, axis = plt.subplots(figsize=(10, 12), dpi=160)
     edges.plot(ax=axis, color="#8c8c8c", linewidth=0.45, alpha=0.55)
+
+    if area.anchors_lon_lat:
+        anchors = gpd.GeoDataFrame(
+            {"label": [anchor[0] for anchor in area.anchors_lon_lat]},
+            geometry=[Point(anchor[1], anchor[2]) for anchor in area.anchors_lon_lat],
+            crs="EPSG:4326",
+        ).to_crs(epsg=32646)
+        anchors.plot(
+            ax=axis,
+            color="#2166ac",
+            edgecolor="white",
+            marker="*",
+            markersize=180,
+            linewidth=0.7,
+            zorder=5,
+        )
+        for label, point in zip(anchors["label"], anchors.geometry, strict=True):
+            axis.annotate(
+                label,
+                (point.x, point.y),
+                xytext=(6, 4),
+                textcoords="offset points",
+                fontsize=8,
+                color="#053061",
+                fontweight="bold",
+                zorder=6,
+            )
 
     if ranked_nodes:
         points = ox.projection.project_gdf(
@@ -110,12 +169,16 @@ def build_static_preview(
                 zorder=4,
             )
 
-    axis.set_title(f"DhakaGraph — {area.name}\nTop structural intersections", fontsize=13)
+    axis.set_title(
+        f"DhakaGraph \N{EM DASH} {area.name}\nTop structural intersections",
+        fontsize=13,
+    )
     axis.set_axis_off()
     figure.text(
         0.01,
         0.01,
-        "© OpenStreetMap contributors, ODbL | Structural centrality, not live traffic",
+        "\N{COPYRIGHT SIGN} OpenStreetMap contributors, ODbL | "
+        "Structural centrality, not live traffic",
         fontsize=7,
         color="#555555",
     )

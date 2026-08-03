@@ -4,14 +4,15 @@ DhakaGraph is a learning-oriented exploration of Dhaka as a spatial graph. The
 project begins with roads and intersections, then adds places, public transport,
 and flood scenarios as the underlying data are audited.
 
-The first milestone builds a drive network within 2.5 km of Shahbag from
-OpenStreetMap, converts it through City2Graph, calculates structural network
-metrics, and writes an interactive map. These metrics describe map connectivity;
-they are not measurements of live Dhaka traffic.
+The default milestone builds a drive network across a fixed polygon from Uttara
+and the Airport south to Sayedabad, with Mirpur included to the west. It converts
+the network through City2Graph, calculates structural network metrics, and writes
+an interactive map. These metrics describe map connectivity; they are not
+measurements of live Dhaka traffic.
 
 ## Current milestone
 
-- Download and cache a small central-Dhaka road graph.
+- Download and cache the expanded north-south Dhaka road graph.
 - Convert the OSMnx graph through City2Graph.
 - Measure graph size, connectivity, and approximate node betweenness.
 - Export ranked intersections, a summary, processed spatial layers, and an HTML map.
@@ -39,28 +40,32 @@ dhakagraph-pilot
 Useful options:
 
 ```powershell
-dhakagraph-pilot --radius 1500 --centrality-samples 200 --top-n 25
+dhakagraph-pilot --centrality-samples 200 --top-n 40
 dhakagraph-pilot --refresh
+dhakagraph-pilot --area shahbag --radius 1500
 ```
 
-The first run needs internet access to query OpenStreetMap. Later runs reuse
-the cached GraphML file unless `--refresh` is supplied.
+The default `expanded` area uses a checked-in polygon that contains Airport,
+Uttara, Mirpur, and Sayedabad anchors. The original 2.5 km Shahbag pilot remains
+available with `--area shahbag`. The first run needs internet access to query
+OpenStreetMap; later runs reuse the cached GraphML file unless `--refresh` is
+supplied. See [docs/STUDY_AREA.md](docs/STUDY_AREA.md) for the boundary definition.
 
 ## Outputs
 
-The latest central-Dhaka pilot snapshot is available online:
+The latest expanded Dhaka pilot snapshot is available online:
 
 - [Open the interactive centrality map](https://emam26.github.io/DhakaGraph/outputs/maps/centrality_map.html)
 - [View the full-size static map](outputs/maps/centrality_preview.png)
 - [Read the network summary](outputs/tables/network_summary.json)
 - [Browse the ranked intersections](outputs/tables/top_intersections.csv)
 
-![Central Dhaka road-network centrality preview](outputs/maps/centrality_preview.png)
+![Expanded Dhaka road-network centrality preview](outputs/maps/centrality_preview.png)
 
 ```text
-data/raw/central_dhaka_shahbag_drive.graphml
-data/processed/central_dhaka_shahbag_nodes.geojson
-data/processed/central_dhaka_shahbag_edges.geojson
+data/raw/airport_uttara_mirpur_sayedabad_drive.graphml
+data/processed/airport_uttara_mirpur_sayedabad_nodes.geojson
+data/processed/airport_uttara_mirpur_sayedabad_edges.geojson
 outputs/tables/network_summary.json
 outputs/tables/top_intersections.csv
 outputs/maps/centrality_map.html

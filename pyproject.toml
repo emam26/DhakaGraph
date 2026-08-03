@@ -13,6 +13,7 @@ dependencies = [
     "folium>=0.19,<1.0",
     "matplotlib>=3.10,<4.0",
     "osmnx>=2.0.3,<3.0.0",
+    "shapely>=2.0,<3.0",
 ]
 
 [project.optional-dependencies]
