@@ -1,5 +1,9 @@
 # DhakaGraph
 
+[![DhakaGraph interactive network explorer preview](outputs/maps/network_explorer_desktop.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
+
+**[Open the live interactive Dhaka network explorer →](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)**
+
 DhakaGraph is a learning-oriented exploration of Dhaka as a spatial graph. The
 project begins with roads and intersections, then adds places, public transport,
 and flood scenarios as the underlying data are audited.
@@ -79,11 +83,12 @@ outputs/tables/network_profile.json
 outputs/tables/top_intersections.csv
 outputs/maps/centrality_map.html
 outputs/maps/network_explorer.html
+outputs/maps/network_explorer_desktop.png
 outputs/maps/centrality_preview.png
 ```
 
-The four linked result artifacts are versioned as a reproducible pilot snapshot;
-the downloaded and processed geospatial datasets remain ignored by Git.
+The published maps, previews, and summaries are versioned as a reproducible pilot
+snapshot; the downloaded and processed geospatial datasets remain ignored by Git.
 OpenStreetMap-derived outputs retain attribution: © OpenStreetMap contributors,
 available under the Open Database License.
 
