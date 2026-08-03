@@ -1,19 +1,26 @@
 {
-  "analysis_nodes": 4108,
-  "analysis_undirected_edges": 5474,
-  "center_lat": 23.7386,
-  "center_lon": 90.3954,
+  "analysis_nodes": 29642,
+  "analysis_undirected_edges": 39691,
+  "center_lat": 23.798,
+  "center_lon": 90.385,
   "centrality_method": "length-weighted sampled node betweenness",
   "centrality_samples": 300,
-  "city2graph_edges": 9445,
-  "city2graph_nodes": 4108,
+  "city2graph_edges": 73771,
+  "city2graph_nodes": 29642,
   "connected_components": 1,
   "data_attribution": "\u00a9 OpenStreetMap contributors, ODbL",
-  "largest_component_nodes": 4108,
-  "original_directed_edges": 9445,
+  "largest_component_nodes": 29642,
+  "original_directed_edges": 73771,
   "original_graph_type": "MultiDiGraph",
-  "original_nodes": 4108,
-  "radius_m": 2500,
-  "structural_road_length_km": 422.811,
-  "study_area": "Central Dhaka pilot centered near Shahbag"
+  "original_nodes": 29642,
+  "polygon_bounds_lon_lat": [
+    90.312,
+    23.695,
+    90.442,
+    23.9
+  ],
+  "selection_method": "polygon",
+  "structural_road_length_km": 3364.113,
+  "study_area": "Airport-Uttara-Mirpur-Sayedabad expanded study area",
+  "study_area_slug": "airport_uttara_mirpur_sayedabad"
 }
