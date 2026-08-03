@@ -1,0 +1,221 @@
+{
+  "building_footprint_km2": 68.568,
+  "building_footprint_share": 0.203,
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation",
+  "feature_counts": {
+    "building": 566618,
+    "connector": 43209,
+    "land_use": 2423,
+    "place": 109582,
+    "segment": 51663,
+    "water": 3194
+  },
+  "interpretation": "Coverage and topology from Overture Maps; counts are mapped features, not observed visits, traffic, or population.",
+  "overture_release": "2026-07-22.0",
+  "overture_road_length_km": 4875.968,
+  "poi_groups": [
+    {
+      "category": "Other",
+      "count": 59935
+    },
+    {
+      "category": "Retail & markets",
+      "count": 21501
+    },
+    {
+      "category": "Education",
+      "count": 9456
+    },
+    {
+      "category": "Food & drink",
+      "count": 8312
+    },
+    {
+      "category": "Healthcare",
+      "count": 4174
+    },
+    {
+      "category": "Civic & religious",
+      "count": 3001
+    },
+    {
+      "category": "Transport",
+      "count": 1716
+    },
+    {
+      "category": "Recreation & culture",
+      "count": 1487
+    }
+  ],
+  "processed_road_segments": 57117,
+  "road_graph_edges": 57108,
+  "road_graph_nodes": 43330,
+  "selection_method": "polygon",
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "study_area_km2": 337.737,
+  "study_area_slug": "airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+  "top_land_use_classes": [
+    {
+      "category": "playground",
+      "count": 417
+    },
+    {
+      "category": "residential",
+      "count": 293
+    },
+    {
+      "category": "grass",
+      "count": 269
+    },
+    {
+      "category": "park",
+      "count": 191
+    },
+    {
+      "category": "garden",
+      "count": 163
+    },
+    {
+      "category": "pitch",
+      "count": 161
+    },
+    {
+      "category": "school",
+      "count": 123
+    },
+    {
+      "category": "industrial",
+      "count": 111
+    },
+    {
+      "category": "bunker",
+      "count": 96
+    },
+    {
+      "category": "tee",
+      "count": 59
+    },
+    {
+      "category": "commercial",
+      "count": 46
+    },
+    {
+      "category": "college",
+      "count": 46
+    },
+    {
+      "category": "cemetery",
+      "count": 34
+    },
+    {
+      "category": "grave_yard",
+      "count": 34
+    },
+    {
+      "category": "construction",
+      "count": 33
+    },
+    {
+      "category": "fairway",
+      "count": 33
+    },
+    {
+      "category": "recreation_ground",
+      "count": 32
+    },
+    {
+      "category": "hospital",
+      "count": 32
+    },
+    {
+      "category": "green",
+      "count": 31
+    },
+    {
+      "category": "university",
+      "count": 28
+    }
+  ],
+  "top_poi_categories": [
+    {
+      "category": "uncategorized",
+      "count": 7242
+    },
+    {
+      "category": "professional_services",
+      "count": 3618
+    },
+    {
+      "category": "clothing_store",
+      "count": 3469
+    },
+    {
+      "category": "event_planning",
+      "count": 2997
+    },
+    {
+      "category": "travel_services",
+      "count": 2826
+    },
+    {
+      "category": "restaurant",
+      "count": 2820
+    },
+    {
+      "category": "shopping",
+      "count": 2763
+    },
+    {
+      "category": "landmark_and_historical_building",
+      "count": 2682
+    },
+    {
+      "category": "womens_clothing_store",
+      "count": 2197
+    },
+    {
+      "category": "college_university",
+      "count": 1918
+    },
+    {
+      "category": "educational_services",
+      "count": 1851
+    },
+    {
+      "category": "education",
+      "count": 1830
+    },
+    {
+      "category": "software_development",
+      "count": 1799
+    },
+    {
+      "category": "school",
+      "count": 1669
+    },
+    {
+      "category": "community_services_non_profits",
+      "count": 1460
+    },
+    {
+      "category": "mobile_phone_store",
+      "count": 1110
+    },
+    {
+      "category": "hospital",
+      "count": 1083
+    },
+    {
+      "category": "furniture_store",
+      "count": 1083
+    },
+    {
+      "category": "electronics",
+      "count": 1076
+    },
+    {
+      "category": "real_estate",
+      "count": 1015
+    }
+  ]
+}

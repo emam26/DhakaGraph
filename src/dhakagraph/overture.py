@@ -128,9 +128,19 @@ def export_overture_graph_layers(
         "road_nodes": output_dir / f"{slug}_road_nodes.geojson",
         "road_edges": output_dir / f"{slug}_road_edges.geojson",
     }
-    processed.to_crs("EPSG:4326").to_file(outputs["processed_roads"], driver="GeoJSON")
-    nodes.to_crs("EPSG:4326").reset_index().to_file(outputs["road_nodes"], driver="GeoJSON")
-    edges.to_crs("EPSG:4326").reset_index().to_file(outputs["road_edges"], driver="GeoJSON")
+    road_columns = [
+        column
+        for column in ("id", "names", "subtype", "class", "split_from", "split_to", "length")
+        if column in processed
+    ]
+    edge_columns = [column for column in road_columns if column in edges]
+    processed_export = processed[road_columns + [processed.geometry.name]].to_crs("EPSG:4326")
+    edge_export = edges[edge_columns + [edges.geometry.name]].to_crs("EPSG:4326")
+    node_export = nodes[[nodes.geometry.name]].to_crs("EPSG:4326")
+
+    processed_export.to_file(outputs["processed_roads"], driver="GeoJSON")
+    node_export.reset_index().to_file(outputs["road_nodes"], driver="GeoJSON")
+    edge_export.reset_index().to_file(outputs["road_edges"], driver="GeoJSON")
     return outputs
 
 

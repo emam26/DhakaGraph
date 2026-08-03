@@ -1,0 +1,7 @@
+layer,features,valid_geometries,empty_geometries,geometry_types,attribute_columns
+building,566618,566618,0,"MultiPolygon, Polygon",20
+segment,51663,51663,0,LineString,19
+connector,43209,43209,0,Point,3
+place,109582,109582,0,Point,15
+land_use,2423,2423,0,"LineString, MultiPolygon, Polygon",9
+water,3194,3194,0,"LineString, MultiLineString, MultiPolygon, Point, Polygon",11

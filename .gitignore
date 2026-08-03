@@ -20,9 +20,15 @@ outputs/maps/*
 !outputs/maps/centrality_preview.png
 !outputs/maps/network_explorer.html
 !outputs/maps/network_explorer_desktop.png
+!outputs/maps/overture_explorer.html
+!outputs/maps/overture_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
 !outputs/tables/top_intersections.csv
 !outputs/tables/network_profile.json
+!outputs/tables/overture_summary.json
+!outputs/tables/overture_layer_audit.csv
+!outputs/tables/overture_poi_categories.csv
+!outputs/tables/overture_land_use_classes.csv
 
