@@ -313,19 +313,6 @@ def build_network_explorer(
         ).add_to(feature_group)
         feature_group.add_to(map_object)
 
-    if area.geometry is not None:
-        folium.GeoJson(
-            area.geometry.__geo_interface__,
-            name="Study boundary",
-            style_function=lambda _feature: {
-                "color": "#167d8d",
-                "weight": 2,
-                "opacity": 0.9,
-                "fillOpacity": 0.02,
-                "dashArray": "7 5",
-            },
-        ).add_to(map_object)
-
     corridor_layer = folium.FeatureGroup(name="Illustrative anchor corridor", show=True)
     segment_colors = ["#ec6b56", "#f09f3e", "#8f5aa8"]
     for index, segment in enumerate(profile["anchor_route"]["segments"]):

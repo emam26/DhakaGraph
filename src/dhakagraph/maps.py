@@ -38,19 +38,6 @@ def build_centrality_map(
     west, south, east, north = nodes.total_bounds
     map_object.fit_bounds([[south, west], [north, east]])
 
-    if area.geometry is not None:
-        folium.GeoJson(
-            area.geometry.__geo_interface__,
-            name="Study boundary",
-            style_function=lambda _feature: {
-                "color": "#2166ac",
-                "weight": 2,
-                "opacity": 0.8,
-                "fillOpacity": 0.0,
-                "dashArray": "6 4",
-            },
-        ).add_to(map_object)
-
     if area.anchors_lon_lat:
         anchor_layer = folium.FeatureGroup(name="Requested place anchors", show=True)
         for label, longitude, latitude in area.anchors_lon_lat:
