@@ -1705,31 +1705,31 @@
     ]
   },
   "centrality_quantiles": {
-    "maximum": 0.108273504,
-    "p50_positive": 0.000737179,
-    "p90_positive": 0.013472785,
-    "p99_positive": 0.052109537
+    "maximum": 0.128531001,
+    "p50_positive": 0.00061163,
+    "p90_positive": 0.011386098,
+    "p99_positive": 0.048150487
   },
   "degree_distribution": [
     {
       "degree": 1,
-      "nodes": 6095
+      "nodes": 7040
     },
     {
       "degree": 2,
-      "nodes": 417
+      "nodes": 433
     },
     {
       "degree": 3,
-      "nodes": 20095
+      "nodes": 22646
     },
     {
       "degree": 4,
-      "nodes": 3008
+      "nodes": 3585
     },
     {
       "degree": 5,
-      "nodes": 26
+      "nodes": 32
     },
     {
       "degree": 6,
@@ -1739,55 +1739,55 @@
   "road_class_length_km": [
     {
       "class": "residential",
-      "length_km": 1960.72
+      "length_km": 2357.18
     },
     {
       "class": "living_street",
-      "length_km": 400.01
+      "length_km": 506.79
     },
     {
       "class": "tertiary",
-      "length_km": 257.09
+      "length_km": 333.98
     },
     {
       "class": "primary",
-      "length_km": 199.48
-    },
-    {
-      "class": "secondary",
-      "length_km": 179.47
+      "length_km": 214.76
     },
     {
       "class": "unclassified",
-      "length_km": 160.85
+      "length_km": 203.29
+    },
+    {
+      "class": "secondary",
+      "length_km": 197.02
     },
     {
       "class": "trunk",
-      "length_km": 143.15
+      "length_km": 146.54
     },
     {
       "class": "motorway",
-      "length_km": 29.66
-    },
-    {
-      "class": "trunk_link",
-      "length_km": 10.62
+      "length_km": 28.14
     },
     {
       "class": "motorway_link",
-      "length_km": 8.84
+      "length_km": 18.0
     },
     {
-      "class": "secondary_link",
-      "length_km": 6.97
+      "class": "trunk_link",
+      "length_km": 13.4
     },
     {
       "class": "primary_link",
-      "length_km": 6.29
+      "length_km": 8.51
+    },
+    {
+      "class": "secondary_link",
+      "length_km": 7.03
     },
     {
       "class": "tertiary_link",
-      "length_km": 0.95
+      "length_km": 1.04
     },
     {
       "class": "road",
@@ -1797,15 +1797,15 @@
   "road_group_length_km": [
     {
       "group": "local",
-      "length_km": 2521.59
+      "length_km": 3067.27
     },
     {
       "group": "connector",
-      "length_km": 444.48
+      "length_km": 539.07
     },
     {
       "group": "arterial",
-      "length_km": 398.04
+      "length_km": 429.36
     }
   ],
   "top_named_streets": [
@@ -1830,32 +1830,32 @@
       "street": "\u0986\u0989\u099f\u09be\u09b0 \u09b8\u09be\u09b0\u09cd\u0995\u09c1\u09b2\u09be\u09b0 \u09b0\u09cb\u09a1"
     },
     {
+      "length_km": 10.43,
+      "street": "\u09ae\u09be\u09a6\u09be\u09a8\u09c0 \u098f\u09ad\u09bf\u09a8\u09bf\u0989"
+    },
+    {
       "length_km": 10.42,
       "street": "Hatirjheel Link Road"
+    },
+    {
+      "length_km": 10.39,
+      "street": "\u09ae\u09c7\u09df\u09b0 \u09ae\u09cb\u09b9\u09be\u09ae\u09cd\u09ae\u09a6 \u09b9\u09be\u09a8\u09bf\u09ab \u09ab\u09cd\u09b2\u09be\u0987\u0993\u09ad\u09be\u09b0"
+    },
+    {
+      "length_km": 10.24,
+      "street": "\u099c\u09c1\u09b2\u09be\u0987 \u09e9\u09ec \u098f\u0995\u09cd\u09b8\u09aa\u09cd\u09b0\u09c7\u09b8\u0993\u09af\u09bc\u09c7"
     },
     {
       "length_km": 9.73,
       "street": "Road 1"
     },
     {
-      "length_km": 9.37,
-      "street": "\u09b8\u09cb\u09a8\u09be\u09b0\u0997\u09be\u0981\u0993 \u099c\u09a8\u09aa\u09a5"
-    },
-    {
-      "length_km": 9.26,
+      "length_km": 9.6,
       "street": "Road 3"
     },
     {
-      "length_km": 8.96,
-      "street": "\u09ae\u09c7\u09df\u09b0 \u09ae\u09cb\u09b9\u09be\u09ae\u09cd\u09ae\u09a6 \u09b9\u09be\u09a8\u09bf\u09ab \u09ab\u09cd\u09b2\u09be\u0987\u0993\u09ad\u09be\u09b0"
-    },
-    {
-      "length_km": 8.05,
-      "street": "Road 5"
-    },
-    {
-      "length_km": 7.7,
-      "street": "Road 2"
+      "length_km": 9.37,
+      "street": "\u09b8\u09cb\u09a8\u09be\u09b0\u0997\u09be\u0981\u0993 \u099c\u09a8\u09aa\u09a5"
     }
   ]
 }
