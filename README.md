@@ -55,10 +55,17 @@ supplied. See [docs/STUDY_AREA.md](docs/STUDY_AREA.md) for the boundary definiti
 
 The latest expanded Dhaka pilot snapshot is available online:
 
+- [Explore the dynamic network dashboard](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
 - [Open the interactive centrality map](https://emam26.github.io/DhakaGraph/outputs/maps/centrality_map.html)
 - [View the full-size static map](outputs/maps/centrality_preview.png)
 - [Read the network summary](outputs/tables/network_summary.json)
+- [Read the extended network profile](outputs/tables/network_profile.json)
 - [Browse the ranked intersections](outputs/tables/top_intersections.csv)
+
+The dynamic explorer provides switchable betweenness/degree rankings, a visible-node
+slider, street-name filtering, selectable intersections, topology sketches,
+degree and road-class charts, named-road summaries, anchor focus controls, and an
+illustrative Uttara-Airport-Mirpur-Sayedabad shortest-distance graph connection.
 
 ![Expanded Dhaka road-network centrality preview](outputs/maps/centrality_preview.png)
 
@@ -67,8 +74,10 @@ data/raw/airport_uttara_mirpur_sayedabad_drive.graphml
 data/processed/airport_uttara_mirpur_sayedabad_nodes.geojson
 data/processed/airport_uttara_mirpur_sayedabad_edges.geojson
 outputs/tables/network_summary.json
+outputs/tables/network_profile.json
 outputs/tables/top_intersections.csv
 outputs/maps/centrality_map.html
+outputs/maps/network_explorer.html
 outputs/maps/centrality_preview.png
 ```
 
