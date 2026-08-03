@@ -48,6 +48,15 @@ the cached GraphML file unless `--refresh` is supplied.
 
 ## Outputs
 
+The latest central-Dhaka pilot snapshot is available online:
+
+- [Open the interactive centrality map](https://htmlpreview.github.io/?https://github.com/emam26/DhakaGraph/blob/main/outputs/maps/centrality_map.html)
+- [View the full-size static map](outputs/maps/centrality_preview.png)
+- [Read the network summary](outputs/tables/network_summary.json)
+- [Browse the ranked intersections](outputs/tables/top_intersections.csv)
+
+![Central Dhaka road-network centrality preview](outputs/maps/centrality_preview.png)
+
 ```text
 data/raw/central_dhaka_shahbag_drive.graphml
 data/processed/central_dhaka_shahbag_nodes.geojson
@@ -58,9 +67,10 @@ outputs/maps/centrality_map.html
 outputs/maps/centrality_preview.png
 ```
 
-Generated data and maps are intentionally ignored by Git. OpenStreetMap-derived
-outputs must retain attribution: © OpenStreetMap contributors, available under
-the Open Database License.
+The four linked result artifacts are versioned as a reproducible pilot snapshot;
+the downloaded and processed geospatial datasets remain ignored by Git.
+OpenStreetMap-derived outputs retain attribution: © OpenStreetMap contributors,
+available under the Open Database License.
 
 ## Roadmap
 

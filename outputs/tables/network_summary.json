@@ -1,0 +1,19 @@
+{
+  "analysis_nodes": 4108,
+  "analysis_undirected_edges": 5474,
+  "center_lat": 23.7386,
+  "center_lon": 90.3954,
+  "centrality_method": "length-weighted sampled node betweenness",
+  "centrality_samples": 300,
+  "city2graph_edges": 9445,
+  "city2graph_nodes": 4108,
+  "connected_components": 1,
+  "data_attribution": "\u00a9 OpenStreetMap contributors, ODbL",
+  "largest_component_nodes": 4108,
+  "original_directed_edges": 9445,
+  "original_graph_type": "MultiDiGraph",
+  "original_nodes": 4108,
+  "radius_m": 2500,
+  "structural_road_length_km": 422.811,
+  "study_area": "Central Dhaka pilot centered near Shahbag"
+}

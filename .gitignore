@@ -16,6 +16,10 @@ data/processed/*
 !data/processed/.gitkeep
 outputs/maps/*
 !outputs/maps/.gitkeep
+!outputs/maps/centrality_map.html
+!outputs/maps/centrality_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
+!outputs/tables/network_summary.json
+!outputs/tables/top_intersections.csv
 
