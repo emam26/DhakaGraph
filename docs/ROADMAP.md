@@ -30,10 +30,10 @@ contiguity centrality into 643 reproducible 750 m cells. Network walking times,
 10/15/30-minute service counts, modeled driving comparisons and transparent
 demand-adjusted service-gap scores are now published. Transit remains unmodeled
 until a validated Dhaka GTFS source is available. Stage 3 now adds an anchor-based
-neighborhood-similarity explorer over the urban and accessibility features. The
-next stages add flood-resilience simulation and population-weighted service
-equity. The equity baseline currently uses a mapped built/residential-intensity
-proxy and accepts an external cell population table.
+neighborhood-similarity explorer over the urban and accessibility features.
+Flood-resilience simulation and population-weighted service equity are now also
+published. The equity baseline currently uses a mapped built/residential-
+intensity proxy and accepts an external cell population table.
 
 ## Milestone 4: public transport
 
@@ -65,7 +65,14 @@ published. It combines built/road heat exposure, modeled air exposure, and
 green-space deficit. Spatial air-quality and satellite-temperature inputs remain
 the next data improvements.
 
-## Milestone 8: optional graph learning
+## Milestone 8: compound urban-stress synthesis
+
+Status: a multi-signal priority screen is now published. It combines service
+need, environmental burden, modeled intersection pressure, and flood disruption
+into an auditable cell-level shortlist for field validation. It is a screening
+tool, not an official risk classification.
+
+## Milestone 9: optional graph learning
 
 Introduce PyTorch Geometric only after a useful target, labels, baseline, and
 evaluation split have been defined.

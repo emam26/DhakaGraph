@@ -19,6 +19,9 @@ can tell us about how different parts of the city are structured and served.
 This is not a live-traffic system and it does not claim to measure actual
 footfall, road usage, population, or service quality.
 
+See the [organized output catalog](docs/OUTPUTS.md) for every published map,
+preview, table, and interpretation note.
+
 ## Study area
 
 The expanded study covers Airport and Uttara in the north, Sayedabad in the
