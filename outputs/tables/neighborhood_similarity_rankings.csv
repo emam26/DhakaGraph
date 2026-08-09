@@ -1,0 +1,71 @@
+anchor,anchor_cell,rank,cell_id,similarity_score,urban_class
+Airport,C013_022,1,C013_022,100.0,Cluster 6 · high building coverage / retail-rich
+Airport,C013_022,2,C014_021,96.682,Cluster 3 · building-dense / limited recreation POIs
+Airport,C013_022,3,C014_029,85.685,Cluster 7 · residential land use / road-dense
+Airport,C013_022,4,C014_020,85.584,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Airport,C013_022,5,C013_021,83.784,Cluster 4 · road-sparse / intersection-sparse
+Airport,C013_022,6,C003_013,75.171,Cluster 3 · building-dense / limited recreation POIs
+Airport,C013_022,7,C004_007,69.657,Cluster 3 · building-dense / limited recreation POIs
+Airport,C013_022,8,C014_030,68.021,Cluster 1 · market-distant / service-light
+Airport,C013_022,9,C001_012,67.734,Cluster 4 · road-sparse / intersection-sparse
+Airport,C013_022,10,C001_011,63.593,Cluster 5 · limited retail / low building coverage
+Uttara,C011_025,1,C011_025,100.0,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,2,C012_026,98.828,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,3,C014_007,98.729,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,4,C010_026,98.636,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,5,C007_019,98.202,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,6,C006_015,98.151,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,7,C006_011,97.595,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,8,C012_024,97.454,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,9,C011_026,97.36,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Uttara,C011_025,10,C007_012,97.309,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,1,C007_017,100.0,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,2,C006_010,92.186,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,3,C014_017,90.127,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,4,C006_009,89.106,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,5,C005_010,88.422,Cluster 6 · high building coverage / retail-rich
+Mirpur,C007_017,6,C014_010,87.781,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,7,C006_013,87.012,Cluster 6 · high building coverage / retail-rich
+Mirpur,C007_017,8,C013_011,86.009,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Mirpur,C007_017,9,C004_010,85.422,Cluster 7 · residential land use / road-dense
+Mirpur,C007_017,10,C017_010,84.585,Cluster 7 · residential land use / road-dense
+Gulshan,C014_014,1,C014_014,100.0,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,2,C012_014,98.906,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,3,C010_009,97.602,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,4,C014_006,96.618,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,5,C013_014,96.276,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,6,C015_017,95.73,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,7,C011_008,95.034,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,8,C008_009,94.874,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,9,C013_004,94.835,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Gulshan,C014_014,10,C014_012,94.412,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Badda,C018_012,1,C018_012,100.0,Cluster 4 · road-sparse / intersection-sparse
+Badda,C018_012,2,C011_023,97.548,Cluster 5 · limited retail / low building coverage
+Badda,C018_012,3,C004_020,94.777,Cluster 5 · limited retail / low building coverage
+Badda,C018_012,4,C017_021,94.516,Cluster 4 · road-sparse / intersection-sparse
+Badda,C018_012,5,C019_013,93.491,Cluster 4 · road-sparse / intersection-sparse
+Badda,C018_012,6,C012_020,90.56,Cluster 5 · limited retail / low building coverage
+Badda,C018_012,7,C018_022,89.774,Cluster 5 · limited retail / low building coverage
+Badda,C018_012,8,C006_022,88.716,Cluster 5 · limited retail / low building coverage
+Badda,C018_012,9,C004_021,88.328,Cluster 4 · road-sparse / intersection-sparse
+Badda,C018_012,10,C007_023,88.024,Cluster 5 · limited retail / low building coverage
+Bashundhara,C017_018,1,C017_018,100.0,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,2,C008_013,96.257,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,3,C015_018,95.915,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,4,C015_019,95.851,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,5,C009_016,95.767,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,6,C010_014,95.595,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,7,C006_017,95.317,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,8,C013_009,94.94,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,9,C006_014,94.658,Cluster 6 · high building coverage / retail-rich
+Bashundhara,C017_018,10,C015_011,94.567,Cluster 6 · high building coverage / retail-rich
+Sayedabad,C015_003,1,C015_003,100.0,Cluster 6 · high building coverage / retail-rich
+Sayedabad,C015_003,2,C008_005,92.43,Cluster 3 · building-dense / limited recreation POIs
+Sayedabad,C015_003,3,C014_003,91.628,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Sayedabad,C015_003,4,C009_004,91.073,Cluster 6 · high building coverage / retail-rich
+Sayedabad,C015_003,5,C015_002,90.197,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Sayedabad,C015_003,6,C005_013,89.74,Cluster 6 · high building coverage / retail-rich
+Sayedabad,C015_003,7,C014_002,89.638,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Sayedabad,C015_003,8,C015_001,89.469,Cluster 2 · recreation/culture-rich / transport-POI-rich
+Sayedabad,C015_003,9,C005_009,88.969,Cluster 6 · high building coverage / retail-rich
+Sayedabad,C015_003,10,C013_002,88.501,Cluster 2 · recreation/culture-rich / transport-POI-rich

@@ -102,6 +102,19 @@ times and fewer facilities within the modeled 15-minute range. It is a useful
 screening result for asking where access appears weaker in the mapped data; it
 is not a population-weighted equity measure.
 
+### 5. Neighborhood similarity
+
+The similarity explorer lets you choose Airport, Uttara, Mirpur, Gulshan,
+Badda, Bashundhara, or Sayedabad as a reference and find cells elsewhere with
+a similar mapped profile. The comparison uses building intensity, road and
+intersection structure, POI mix, land use, network centrality, and modeled
+service access.
+
+This is useful for asking questions such as: which other parts of Dhaka look
+like a high-building, retail-rich area, or where are there places with a
+similar structure but weaker service access? Similarity is a feature-profile
+comparison, not a claim of social, cultural, or demographic equivalence.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -116,6 +129,8 @@ is not a population-weighted equity measure.
 | [`urban_atlas_preview.png`](outputs/maps/urban_atlas_preview.png) | Static atlas preview. |
 | [`service_accessibility.html`](outputs/maps/service_accessibility.html) | Interactive walking-access and service-desert explorer. |
 | [`service_accessibility_preview.png`](outputs/maps/service_accessibility_preview.png) | Static service-accessibility preview. |
+| [`neighborhood_similarity.html`](outputs/maps/neighborhood_similarity.html) | Interactive reference-neighborhood similarity explorer. |
+| [`neighborhood_similarity_preview.png`](outputs/maps/neighborhood_similarity_preview.png) | Static similarity preview for four reference areas. |
 
 ## Published tables and summaries
 
@@ -133,6 +148,9 @@ is not a population-weighted equity measure.
 | [`service_accessibility_summary.json`](outputs/tables/service_accessibility_summary.json) | Facility totals, walking-time statistics, assumptions, and limitations. |
 | [`service_accessibility_cells.csv`](outputs/tables/service_accessibility_cells.csv) | One row per cell with modeled access times and facility counts. |
 | [`service_deserts.csv`](outputs/tables/service_deserts.csv) | Cells ranked by the demand-adjusted service-gap score. |
+| [`neighborhood_similarity_cells.csv`](outputs/tables/neighborhood_similarity_cells.csv) | One row per cell with similarity scores for all seven anchors. |
+| [`neighborhood_similarity_rankings.csv`](outputs/tables/neighborhood_similarity_rankings.csv) | Top ten matching cells for each reference neighborhood. |
+| [`neighborhood_similarity_summary.json`](outputs/tables/neighborhood_similarity_summary.json) | Feature list, anchor-cell matches, method, and interpretation notes. |
 
 ## Run the project
 

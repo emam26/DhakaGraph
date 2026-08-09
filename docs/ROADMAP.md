@@ -29,8 +29,9 @@ mapped places, land use, buildings, roads, intersections, service distances and
 contiguity centrality into 643 reproducible 750 m cells. Network walking times,
 10/15/30-minute service counts, modeled driving comparisons and transparent
 demand-adjusted service-gap scores are now published. Transit remains unmodeled
-until a validated Dhaka GTFS source is available. The next ordered stage adds the
-neighborhood-similarity explorer.
+until a validated Dhaka GTFS source is available. Stage 3 now adds an anchor-based
+neighborhood-similarity explorer over the urban and accessibility features. The
+next stage is flood-resilience simulation.
 
 ## Milestone 4: public transport
 

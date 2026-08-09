@@ -23,6 +23,8 @@ from dhakagraph.overture import (
     load_or_download_overture,
     process_overture_roads,
 )
+from dhakagraph.similarity import build_neighborhood_similarity
+from dhakagraph.similarity_maps import build_similarity_explorer, build_similarity_preview
 from dhakagraph.urban import CELL_SIZE_M, build_urban_atlas
 from dhakagraph.urban_maps import build_urban_atlas_explorer, build_urban_atlas_preview
 
@@ -219,18 +221,79 @@ def build_urban_stage_two(
     }
 
 
+def build_urban_stage_three(
+    *,
+    area_key: str = "expanded",
+    release: str = OVERTURE_RELEASE,
+    cell_size_m: int = CELL_SIZE_M,
+) -> dict[str, Path]:
+    """Build the neighborhood similarity explorer."""
+    if area_key not in STUDY_AREAS:
+        choices = ", ".join(sorted(STUDY_AREAS))
+        raise ValueError(f"unknown study area {area_key!r}; choose from: {choices}")
+    area = STUDY_AREAS[area_key]
+    root = project_root()
+    atlas_path = root / "data" / "processed" / "urban" / f"{area.slug}_urban_cells.geojson"
+    access_path = (
+        root / "data" / "processed" / "urban" / f"{area.slug}_service_accessibility.geojson"
+    )
+    if not access_path.exists():
+        build_urban_stage_two(area_key=area_key, release=release, cell_size_m=cell_size_m)
+    cells = gpd.read_file(atlas_path)
+    access = gpd.read_file(access_path).drop(columns="geometry", errors="ignore")
+    cells = cells.merge(access, on="cell_id", how="left", suffixes=("", "_access"))
+    cells, rankings, summary = build_neighborhood_similarity(cells, area)
+    summary.update(
+        {
+            "study_area": area.name,
+            "study_area_slug": area.slug,
+            "cell_size_m": cell_size_m,
+            "overture_release": release,
+            "data_attribution": "© OpenStreetMap contributors, Overture Maps Foundation",
+        }
+    )
+    processed_dir = root / "data" / "processed" / "urban"
+    tables_dir = root / "outputs" / "tables"
+    maps_dir = root / "outputs" / "maps"
+    processed_path = processed_dir / f"{area.slug}_neighborhood_similarity.geojson"
+    cells_table_path = tables_dir / "neighborhood_similarity_cells.csv"
+    ranking_path = tables_dir / "neighborhood_similarity_rankings.csv"
+    summary_path = tables_dir / "neighborhood_similarity_summary.json"
+    explorer_path = maps_dir / "neighborhood_similarity.html"
+    preview_path = maps_dir / "neighborhood_similarity_preview.png"
+    cells.to_crs("EPSG:4326").to_file(processed_path, driver="GeoJSON")
+    cells.drop(columns="geometry").round(6).to_csv(cells_table_path, index=False)
+    pd.DataFrame(rankings).to_csv(ranking_path, index=False)
+    _write_json(summary_path, summary)
+    build_similarity_explorer(cells, rankings, summary, area, explorer_path)
+    build_similarity_preview(cells, area, preview_path)
+    return {
+        "cells": processed_path,
+        "cell_table": cells_table_path,
+        "rankings": ranking_path,
+        "summary": summary_path,
+        "explorer": explorer_path,
+        "preview": preview_path,
+    }
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--area", choices=sorted(STUDY_AREAS), default="expanded")
     parser.add_argument("--release", default=OVERTURE_RELEASE)
     parser.add_argument("--cell-size", type=int, default=CELL_SIZE_M, dest="cell_size_m")
-    parser.add_argument("--through-stage", type=int, choices=(1, 2), default=2)
+    parser.add_argument("--through-stage", type=int, choices=(1, 2, 3), default=3)
     return parser
 
 
 def main() -> None:
     args = _parser().parse_args()
-    builder = build_urban_stage_one if args.through_stage == 1 else build_urban_stage_two
+    builders = {
+        1: build_urban_stage_one,
+        2: build_urban_stage_two,
+        3: build_urban_stage_three,
+    }
+    builder = builders[args.through_stage]
     outputs = builder(area_key=args.area, release=args.release, cell_size_m=args.cell_size_m)
     print(f"DhakaGraph urban stage {args.through_stage} completed:")
     for name, path in outputs.items():

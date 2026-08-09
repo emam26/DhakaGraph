@@ -26,6 +26,8 @@ outputs/maps/*
 !outputs/maps/urban_atlas_preview.png
 !outputs/maps/service_accessibility.html
 !outputs/maps/service_accessibility_preview.png
+!outputs/maps/neighborhood_similarity.html
+!outputs/maps/neighborhood_similarity_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
@@ -40,4 +42,7 @@ outputs/tables/*
 !outputs/tables/service_accessibility_cells.csv
 !outputs/tables/service_accessibility_summary.json
 !outputs/tables/service_deserts.csv
+!outputs/tables/neighborhood_similarity_cells.csv
+!outputs/tables/neighborhood_similarity_rankings.csv
+!outputs/tables/neighborhood_similarity_summary.json
 
