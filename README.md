@@ -9,7 +9,8 @@
 **[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)** |
 **[Explore service equity](https://emam26.github.io/DhakaGraph/outputs/maps/population_equity.html)** |
 **[Explore mobility pressure](https://emam26.github.io/DhakaGraph/outputs/maps/mobility_pressure.html)** |
-**[Explore heat, air, and green space](https://emam26.github.io/DhakaGraph/outputs/maps/environmental_screen.html)**
+**[Explore heat, air, and green space](https://emam26.github.io/DhakaGraph/outputs/maps/environmental_screen.html)** |
+**[Explore compound hotspots](https://emam26.github.io/DhakaGraph/outputs/maps/compound_stress.html)**
 
 DhakaGraph is a fun, learning-oriented study of Dhaka as a spatial graph. It
 asks what the mapped road network, buildings, places, land use, and services
@@ -177,6 +178,25 @@ measure temperature, PM2.5, or health risk. An optional
 `data/raw/urban/air_quality.csv` file with `cell_id,pm25` can replace the air
 proxy when spatial monitoring data are available.
 
+### 10. Compound urban-stress hotspots
+
+The compound screen asks where multiple pressures overlap in the same 750 m
+cell. It combines four percentile signals: service need, environmental burden,
+modeled intersection pressure, and flood disruption at the 2.0 m and 3.0 m
+sensitivity scenarios. The mapped built/residential-intensity proxy is used
+only to prioritize cells with more mapped population-like weight.
+
+The current run identifies **65 very-high-priority cells** in the top decile,
+covering **18.6% of the mapped population proxy**. **16 cells** have at least
+three of the four signals in their upper quartile, while **one cell** has all
+four. The highest-ranked cells include `C015_029`, `C013_029`, `C016_030`,
+`C015_028`, and `C010_017`.
+
+These are candidate locations for field validation and coordinated interventions
+such as drainage checks, service audits, traffic counts, or heat/air monitoring.
+They are not official risk zones and do not establish actual traffic, flood
+depth, population, or health outcomes.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -201,6 +221,8 @@ proxy when spatial monitoring data are available.
 | [`mobility_pressure_preview.png`](outputs/maps/mobility_pressure_preview.png) | Static preview of high-pressure modeled roads. |
 | [`environmental_screen.html`](outputs/maps/environmental_screen.html) | Interactive heat, air-exposure, green-deficit, and combined-burden map. |
 | [`environmental_screen_preview.png`](outputs/maps/environmental_screen_preview.png) | Four-panel environmental screening preview. |
+| [`compound_stress.html`](outputs/maps/compound_stress.html) | Interactive multi-signal priority map for compound urban-stress hotspots. |
+| [`compound_stress_preview.png`](outputs/maps/compound_stress_preview.png) | Four-panel compound-priority preview. |
 
 ## Published tables and summaries
 
@@ -232,6 +254,9 @@ proxy when spatial monitoring data are available.
 | [`environmental_screen_cells.csv`](outputs/tables/environmental_screen_cells.csv) | Cell-level environmental scores and burden components. |
 | [`environmental_burden_top.csv`](outputs/tables/environmental_burden_top.csv) | Cells ranked by combined modeled environmental burden. |
 | [`environmental_screen_summary.json`](outputs/tables/environmental_screen_summary.json) | Data source, scoring method, and interpretation limits. |
+| [`compound_stress_cells.csv`](outputs/tables/compound_stress_cells.csv) | Cell-level component scores, overlap count, and priority tier. |
+| [`compound_stress_hotspots.csv`](outputs/tables/compound_stress_hotspots.csv) | Ranked compound-priority shortlist. |
+| [`compound_stress_summary.json`](outputs/tables/compound_stress_summary.json) | Compound-screen outcomes, top hotspots, and limitations. |
 
 ## Run the project
 
@@ -246,6 +271,7 @@ dhakagraph-flood
 dhakagraph-equity
 dhakagraph-mobility
 dhakagraph-environment
+dhakagraph-compound
 ```
 
 For environment setup and reproducibility notes, see
@@ -262,8 +288,10 @@ For environment setup and reproducibility notes, see
   population.
 - Public transit is not modeled because this snapshot does not include a
   validated Dhaka GTFS feed.
-- Flood, morphology, and GNN modules are exploratory code for future study
-  extensions; their results are not yet part of the published output snapshot.
+- Compound hotspots are a transparent screening shortlist that combines proxy
+  signals; they are not official hazard, equity, or health classifications.
+- Morphology and GNN modules remain exploratory extensions; the published
+  flood scenarios are explicitly labeled sensitivity models above.
 
 OpenStreetMap-derived outputs retain attribution to
 [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) under the

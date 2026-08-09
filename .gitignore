@@ -37,6 +37,8 @@ outputs/maps/*
 !outputs/maps/mobility_pressure_preview.png
 !outputs/maps/environmental_screen.html
 !outputs/maps/environmental_screen_preview.png
+!outputs/maps/compound_stress.html
+!outputs/maps/compound_stress_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
@@ -65,4 +67,7 @@ outputs/tables/*
 !outputs/tables/environmental_screen_cells.csv
 !outputs/tables/environmental_burden_top.csv
 !outputs/tables/environmental_screen_summary.json
+!outputs/tables/compound_stress_cells.csv
+!outputs/tables/compound_stress_hotspots.csv
+!outputs/tables/compound_stress_summary.json
 

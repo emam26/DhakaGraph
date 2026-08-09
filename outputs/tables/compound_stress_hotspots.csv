@@ -1,0 +1,31 @@
+priority_rank,cell_id,priority_tier,urban_class,population_priority_score,compound_stress_score,overlap_count,population_share_pct,service_need_score,environmental_burden_score_rank,mobility_pressure_score_rank,flood_disruption_score,flood_2m_length_share,flood_3m_length_share
+1,C015_029,Very high,Cluster 7 · residential land use / road-dense,90.66,86.858,3,0.5017,98.756,95.49,99.067,54.121,24.93701272798153,81.54905512760928
+2,C013_029,Very high,Cluster 7 · residential land use / road-dense,85.851,80.054,2,0.4844,70.451,93.157,97.201,59.409,27.45441383905466,85.40667464945247
+3,C016_030,Very high,Cluster 7 · residential land use / road-dense,84.342,78.032,3,0.44,99.067,84.603,97.356,31.104,5.433944095776454,61.67668690868806
+4,C015_028,Very high,Cluster 5 · limited retail / low building coverage,83.69,81.765,3,0.233,97.201,69.207,76.205,84.448,54.60720375769381,93.68091345987966
+5,C012_030,Very high,Cluster 7 · residential land use / road-dense,83.04,76.905,3,0.3757,97.045,89.269,92.224,29.082,0.0,68.65391855446437
+6,C010_017,Very high,Cluster 3 · building-dense / limited recreation POIs,81.924,87.441,4,0.1932,83.981,82.426,92.068,91.291,67.14900131285684,98.86243456583468
+7,C010_018,Very high,Cluster 3 · building-dense / limited recreation POIs,81.855,80.21,2,0.2243,87.403,71.384,71.54,90.513,64.3721352672512,100.0
+8,C016_029,Very high,Cluster 7 · residential land use / road-dense,81.618,74.806,3,0.3815,99.844,78.694,94.246,26.439,3.8061457025477092,50.84343281551271
+9,C011_017,Very high,Cluster 3 · building-dense / limited recreation POIs,80.471,75.234,2,0.2536,72.473,62.986,78.072,87.403,57.59372758353267,100.0
+10,C014_019,Very high,Cluster 6 · high building coverage / retail-rich,79.685,79.044,3,0.2164,99.222,45.101,79.627,92.224,72.78229291277724,96.27714364727984
+11,C014_029,Very high,Cluster 7 · residential land use / road-dense,79.02,71.695,3,0.3162,88.958,87.714,99.689,10.42,0.0,5.5497180707194635
+12,C014_028,Very high,Cluster 7 · residential land use / road-dense,78.651,70.334,2,0.4058,98.289,75.894,73.25,33.904,18.78789730659779,37.88431122125775
+13,C002_014,Very high,Cluster 3 · building-dense / limited recreation POIs,78.447,74.708,3,0.2295,96.423,82.582,26.983,92.846,76.88428617424722,93.35186035854156
+14,C006_008,Very high,Cluster 3 · building-dense / limited recreation POIs,77.795,80.676,3,0.1968,65.008,88.18,83.515,86.003,59.530034990323585,86.79183458034916
+15,C007_005,Very high,Cluster 6 · high building coverage / retail-rich,77.17,73.717,2,0.2231,47.434,89.425,72.473,85.537,55.48829706263078,94.86103798699504
+16,C011_000,Very high,Cluster 3 · building-dense / limited recreation POIs,77.084,71.928,2,0.2353,45.879,99.844,77.138,64.852,37.8668387084752,74.69214950230962
+17,C009_002,Very high,Cluster 3 · building-dense / limited recreation POIs,77.064,71.967,1,0.235,65.319,99.533,66.407,56.61,26.090653989121332,83.9899870854841
+18,C017_010,Very high,Cluster 7 · residential land use / road-dense,76.917,67.691,2,0.4224,30.327,59.876,90.669,89.891,67.26682220309098,90.4752156092521
+19,C009_018,Very high,Cluster 6 · high building coverage / retail-rich,76.683,67.69,2,0.3985,40.435,96.734,82.893,50.7,27.440755076803864,66.35448414957676
+20,C017_030,Very high,Cluster 1 · market-distant / service-light,76.649,71.773,1,0.2312,99.378,54.121,71.695,61.897,23.66781001263026,100.0
+21,C006_013,Very high,Cluster 6 · high building coverage / retail-rich,76.57,68.662,2,0.2761,51.633,58.32,87.247,77.449,44.290582241514116,95.42311202514674
+22,C013_030,Very high,Cluster 7 · residential land use / road-dense,76.093,67.38,2,0.3267,53.655,76.05,88.025,51.788,31.882647194305342,57.649184480337276
+23,C013_013,Very high,Cluster 6 · high building coverage / retail-rich,75.54,65.591,2,0.4352,45.568,99.378,78.694,38.725,15.661305299548617,62.6808459114486
+24,C014_022,Very high,Cluster 7 · residential land use / road-dense,75.327,66.952,2,0.275,36.392,63.142,88.958,79.316,48.89399252336776,88.96457395062932
+25,C013_028,Very high,Cluster 7 · residential land use / road-dense,74.934,64.191,2,0.6714,47.745,90.824,95.023,23.173,4.682347973555454,42.6099644346914
+26,C005_010,Very high,Cluster 6 · high building coverage / retail-rich,74.036,64.308,2,0.3339,25.505,95.334,80.249,56.143,29.65682105931373,74.72448448482707
+27,C013_000,Very high,Cluster 3 · building-dense / limited recreation POIs,73.8,68.604,2,0.2259,95.179,96.89,26.983,55.365,30.069809810529417,71.96518544974015
+28,C012_003,Very high,Cluster 2 · recreation/culture-rich / transport-POI-rich,73.682,64.269,2,0.3037,0.933,91.446,68.274,96.423,99.44452417944841,100.0
+29,C006_018,Very high,Cluster 6 · high building coverage / retail-rich,73.628,64.658,2,0.2728,21.773,90.98,64.541,81.337,50.658002720276116,90.80597993659615
+30,C009_025,Very high,Cluster 6 · high building coverage / retail-rich,73.41,79.277,3,0.1748,81.649,67.963,90.358,77.138,56.15005555698623,67.4241521844763
