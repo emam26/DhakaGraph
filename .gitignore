@@ -30,6 +30,8 @@ outputs/maps/*
 !outputs/maps/neighborhood_similarity_preview.png
 !outputs/maps/flood_simulation.html
 !outputs/maps/flood_simulation_preview.png
+!outputs/maps/population_equity.html
+!outputs/maps/population_equity_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
@@ -49,4 +51,7 @@ outputs/tables/*
 !outputs/tables/neighborhood_similarity_summary.json
 !outputs/tables/flood_cascade_summary.json
 !outputs/tables/vulnerable_roads.csv
+!outputs/tables/population_equity_cells.csv
+!outputs/tables/population_equity_rankings.csv
+!outputs/tables/population_equity_summary.json
 

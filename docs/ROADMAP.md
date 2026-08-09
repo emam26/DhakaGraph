@@ -31,7 +31,9 @@ contiguity centrality into 643 reproducible 750 m cells. Network walking times,
 demand-adjusted service-gap scores are now published. Transit remains unmodeled
 until a validated Dhaka GTFS source is available. Stage 3 now adds an anchor-based
 neighborhood-similarity explorer over the urban and accessibility features. The
-next stage is flood-resilience simulation.
+next stages add flood-resilience simulation and population-weighted service
+equity. The equity baseline currently uses a mapped built/residential-intensity
+proxy and accepts an external cell population table.
 
 ## Milestone 4: public transport
 

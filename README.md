@@ -6,7 +6,8 @@
 **[Explore Overture Maps](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)** |
 **[Explore the urban atlas](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)** |
 **[Explore service access](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)** |
-**[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)**
+**[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)** |
+**[Explore service equity](https://emam26.github.io/DhakaGraph/outputs/maps/population_equity.html)**
 
 DhakaGraph is a fun, learning-oriented study of Dhaka as a spatial graph. It
 asks what the mapped road network, buildings, places, land use, and services
@@ -129,6 +130,20 @@ They are useful for testing network fragility, but they are not measured flood
 depths or an official forecast. Historical flood products should be added before
 using the results for planning decisions.
 
+### 7. Population-weighted service equity
+
+The equity explorer weights service access by mapped built and residential
+intensity, then reports population-weighted walking times and the share of the
+weighted area within 15 minutes of each service. With the current proxy, the
+estimated weighted shares within 15 minutes are **88.6% for education**, **83.4%
+for markets**, **77.1% for transport POIs**, **74.4% for healthcare**, and **65.8%
+for parks**.
+
+This is a better prioritization screen than an unweighted average, but it is
+not yet census-population weighting. The pipeline accepts an optional
+`data/raw/urban/population_cell_weights.csv` file with `cell_id,population` to
+replace the proxy when a validated gridded population source is available.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -147,6 +162,8 @@ using the results for planning decisions.
 | [`neighborhood_similarity_preview.png`](outputs/maps/neighborhood_similarity_preview.png) | Static similarity preview for four reference areas. |
 | [`flood_simulation.html`](outputs/maps/flood_simulation.html) | Interactive modeled flood-level road-disruption map. |
 | [`flood_simulation_preview.png`](outputs/maps/flood_simulation_preview.png) | Static comparison of four flood scenarios. |
+| [`population_equity.html`](outputs/maps/population_equity.html) | Interactive population-weighted service-equity explorer. |
+| [`population_equity_preview.png`](outputs/maps/population_equity_preview.png) | Static equity-gap and population-weight preview. |
 
 ## Published tables and summaries
 
@@ -169,6 +186,9 @@ using the results for planning decisions.
 | [`neighborhood_similarity_summary.json`](outputs/tables/neighborhood_similarity_summary.json) | Feature list, anchor-cell matches, method, and interpretation notes. |
 | [`flood_cascade_summary.json`](outputs/tables/flood_cascade_summary.json) | Modeled flood scenarios, connectivity changes, assumptions, and caveats. |
 | [`vulnerable_roads.csv`](outputs/tables/vulnerable_roads.csv) | Road edges ranked by repeated inundation across modeled scenarios. |
+| [`population_equity_cells.csv`](outputs/tables/population_equity_cells.csv) | Cell-level weights, service gaps, walking times, and 15-minute access. |
+| [`population_equity_rankings.csv`](outputs/tables/population_equity_rankings.csv) | Highest equity-gap cells by service type. |
+| [`population_equity_summary.json`](outputs/tables/population_equity_summary.json) | Weighted service statistics, source label, and interpretation limits. |
 
 ## Run the project
 
@@ -180,6 +200,7 @@ dhakagraph-pilot
 dhakagraph-overture
 dhakagraph-urban
 dhakagraph-flood
+dhakagraph-equity
 ```
 
 For environment setup and reproducibility notes, see

@@ -1,0 +1,51 @@
+service,rank,cell_id,equity_gap_score,population_share_pct,walk_minutes,facilities_within_15min,urban_class
+healthcare,1,C004_030,93.888,0.0552,193.929,0,Cluster 1 · market-distant / service-light
+healthcare,2,C006_030,93.779,0.0681,176.958,0,Cluster 1 · market-distant / service-light
+healthcare,3,C006_029,93.67,0.0264,162.555,0,Cluster 4 · road-sparse / intersection-sparse
+healthcare,4,C022_030,93.561,0.0954,85.493,0,Cluster 1 · market-distant / service-light
+healthcare,5,C005_028,93.453,0.0328,82.471,0,Cluster 4 · road-sparse / intersection-sparse
+healthcare,6,C000_020,93.344,0.0688,81.23,0,Cluster 1 · market-distant / service-light
+healthcare,7,C022_029,93.235,0.1164,79.797,0,Cluster 1 · market-distant / service-light
+healthcare,8,C000_010,93.126,0.1999,76.55,0,Cluster 1 · market-distant / service-light
+healthcare,9,C001_020,93.017,0.0989,76.245,0,Cluster 5 · limited retail / low building coverage
+healthcare,10,C022_025,92.908,0.0751,71.983,0,Cluster 4 · road-sparse / intersection-sparse
+education,1,C023_012,96.477,0.1044,71.463,0,Cluster 1 · market-distant / service-light
+education,2,C022_025,96.369,0.0751,62.761,0,Cluster 4 · road-sparse / intersection-sparse
+education,3,C005_028,96.26,0.0328,60.341,0,Cluster 4 · road-sparse / intersection-sparse
+education,4,C012_022,96.151,0.0466,55.389,0,Cluster 4 · road-sparse / intersection-sparse
+education,5,C023_024,96.042,0.0932,47.576,0,Cluster 1 · market-distant / service-light
+education,6,C004_030,95.933,0.0552,46.281,0,Cluster 1 · market-distant / service-light
+education,7,C023_010,95.824,0.045,45.883,0,Cluster 1 · market-distant / service-light
+education,8,C021_030,95.715,0.0929,44.734,0,Cluster 1 · market-distant / service-light
+education,9,C022_023,95.607,0.092,43.976,0,Cluster 5 · limited retail / low building coverage
+education,10,C022_011,95.498,0.0564,42.686,0,Cluster 4 · road-sparse / intersection-sparse
+market,1,C004_030,95.404,0.0552,193.714,0,Cluster 1 · market-distant / service-light
+market,2,C006_030,95.295,0.0681,176.743,0,Cluster 1 · market-distant / service-light
+market,3,C006_029,95.187,0.0264,162.504,0,Cluster 4 · road-sparse / intersection-sparse
+market,4,C004_028,95.078,0.0595,101.734,0,Cluster 4 · road-sparse / intersection-sparse
+market,5,C005_027,94.969,0.0774,100.206,0,Cluster 4 · road-sparse / intersection-sparse
+market,6,C003_028,94.86,0.108,96.38,0,Cluster 1 · market-distant / service-light
+market,7,C004_027,94.751,0.1346,94.714,0,Cluster 5 · limited retail / low building coverage
+market,8,C005_026,94.642,0.1006,87.633,0,Cluster 5 · limited retail / low building coverage
+market,9,C000_021,94.533,0.1296,85.476,0,Cluster 1 · market-distant / service-light
+market,10,C004_026,94.425,0.0946,84.837,0,Cluster 5 · limited retail / low building coverage
+park,1,C004_030,92.862,0.0552,192.996,0,Cluster 1 · market-distant / service-light
+park,2,C006_030,92.753,0.0681,176.026,0,Cluster 1 · market-distant / service-light
+park,3,C006_029,92.644,0.0264,162.666,0,Cluster 4 · road-sparse / intersection-sparse
+park,4,C005_028,92.535,0.0328,86.052,0,Cluster 4 · road-sparse / intersection-sparse
+park,5,C021_023,92.426,0.0686,77.321,0,Cluster 4 · road-sparse / intersection-sparse
+park,6,C022_024,92.317,0.0647,76.139,0,Cluster 4 · road-sparse / intersection-sparse
+park,7,C022_030,92.208,0.0954,73.834,0,Cluster 1 · market-distant / service-light
+park,8,C023_010,92.1,0.045,68.511,0,Cluster 1 · market-distant / service-light
+park,9,C022_029,91.991,0.1164,68.137,0,Cluster 1 · market-distant / service-light
+park,10,C022_025,91.882,0.0751,68.13,0,Cluster 4 · road-sparse / intersection-sparse
+transport,1,C004_030,94.098,0.0552,189.911,0,Cluster 1 · market-distant / service-light
+transport,2,C006_030,93.989,0.0681,172.94,0,Cluster 1 · market-distant / service-light
+transport,3,C006_029,93.88,0.0264,156.979,0,Cluster 4 · road-sparse / intersection-sparse
+transport,4,C022_025,93.771,0.0751,102.65,0,Cluster 4 · road-sparse / intersection-sparse
+transport,5,C023_012,93.663,0.1044,89.787,0,Cluster 1 · market-distant / service-light
+transport,6,C023_024,93.554,0.0932,87.465,0,Cluster 1 · market-distant / service-light
+transport,7,C022_030,93.445,0.0954,84.319,0,Cluster 1 · market-distant / service-light
+transport,8,C022_023,93.336,0.092,83.865,0,Cluster 5 · limited retail / low building coverage
+transport,9,C022_029,93.227,0.1164,78.623,0,Cluster 1 · market-distant / service-light
+transport,10,C024_017,93.118,0.0411,78.304,0,Cluster 1 · market-distant / service-light

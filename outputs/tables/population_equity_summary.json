@@ -1,0 +1,42 @@
+{
+  "cell_count": 643,
+  "population_weight_total": 1751.025106,
+  "population_source": "Mapped built/residential-intensity proxy; not census population",
+  "service_summaries": {
+    "healthcare": {
+      "population_weighted_mean_walk_minutes": 12.162,
+      "population_share_within_15_minutes": 74.42,
+      "unweighted_median_walk_minutes": 10.378,
+      "p90_walk_minutes": 43.709
+    },
+    "education": {
+      "population_weighted_mean_walk_minutes": 6.563,
+      "population_share_within_15_minutes": 88.632,
+      "unweighted_median_walk_minutes": 5.439,
+      "p90_walk_minutes": 25.049
+    },
+    "market": {
+      "population_weighted_mean_walk_minutes": 9.646,
+      "population_share_within_15_minutes": 83.35,
+      "unweighted_median_walk_minutes": 7.188,
+      "p90_walk_minutes": 38.511
+    },
+    "park": {
+      "population_weighted_mean_walk_minutes": 14.912,
+      "population_share_within_15_minutes": 65.791,
+      "unweighted_median_walk_minutes": 13.599,
+      "p90_walk_minutes": 43.093
+    },
+    "transport": {
+      "population_weighted_mean_walk_minutes": 12.885,
+      "population_share_within_15_minutes": 77.084,
+      "unweighted_median_walk_minutes": 10.342,
+      "p90_walk_minutes": 50.433
+    }
+  },
+  "method": "Population-weighted nearest walking time and 15-minute access",
+  "interpretation": "Equity scores identify cells with relatively weak mapped service access under the selected population weighting. They do not measure income, service capacity, quality, or individual outcomes.",
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "study_area_slug": "airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation"
+}
