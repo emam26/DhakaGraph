@@ -34,6 +34,7 @@ dhakagraph-overture = "dhakagraph.overture_pipeline:main"
 dhakagraph-urban = "dhakagraph.urban_pipeline:main"
 dhakagraph-flood = "dhakagraph.flood_pipeline:main"
 dhakagraph-equity = "dhakagraph.equity_pipeline:main"
+dhakagraph-mobility = "dhakagraph.mobility_pipeline:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dhakagraph"]

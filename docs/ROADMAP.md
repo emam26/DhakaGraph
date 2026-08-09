@@ -51,7 +51,14 @@ distance-to-water elevation proxies. It currently ranks inundated road edges and
 anchor connectivity; historical flood-depth layers and cell-level service-loss
 analysis remain the next improvement.
 
-## Milestone 6: optional graph learning
+## Milestone 6: modeled mobility pressure
+
+Status: a weighted origin-destination baseline is now published. It routes
+building/residential-origin demand proxies toward mapped destinations and ranks
+potential pressure roads and intersections. Traffic counts, GPS traces, and
+validated public-transport feeds remain necessary for observed-usage claims.
+
+## Milestone 7: optional graph learning
 
 Introduce PyTorch Geometric only after a useful target, labels, baseline, and
 evaluation split have been defined.

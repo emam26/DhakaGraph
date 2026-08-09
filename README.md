@@ -7,7 +7,8 @@
 **[Explore the urban atlas](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)** |
 **[Explore service access](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)** |
 **[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)** |
-**[Explore service equity](https://emam26.github.io/DhakaGraph/outputs/maps/population_equity.html)**
+**[Explore service equity](https://emam26.github.io/DhakaGraph/outputs/maps/population_equity.html)** |
+**[Explore mobility pressure](https://emam26.github.io/DhakaGraph/outputs/maps/mobility_pressure.html)**
 
 DhakaGraph is a fun, learning-oriented study of Dhaka as a spatial graph. It
 asks what the mapped road network, buildings, places, land use, and services
@@ -144,6 +145,18 @@ not yet census-population weighting. The pipeline accepts an optional
 `data/raw/urban/population_cell_weights.csv` file with `cell_id,population` to
 replace the proxy when a validated gridded population source is available.
 
+### 8. Modeled mobility pressure
+
+The mobility explorer routes a deterministic weighted sample of **6,372
+origin-destination pairs** through the largest Overture road component. Origins
+are weighted by mapped building and residential intensity; destinations are
+weighted by mapped POI, market, transport, healthcare, and education density.
+
+The pressure score highlights roads and intersections that repeatedly appear in
+modeled routes. It is a useful network-bottleneck experiment and a candidate
+guide for traffic-count collection, but it is not measured traffic volume or
+proof of the most-used roads.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -164,6 +177,8 @@ replace the proxy when a validated gridded population source is available.
 | [`flood_simulation_preview.png`](outputs/maps/flood_simulation_preview.png) | Static comparison of four flood scenarios. |
 | [`population_equity.html`](outputs/maps/population_equity.html) | Interactive population-weighted service-equity explorer. |
 | [`population_equity_preview.png`](outputs/maps/population_equity_preview.png) | Static equity-gap and population-weight preview. |
+| [`mobility_pressure.html`](outputs/maps/mobility_pressure.html) | Interactive modeled origin-destination pressure map. |
+| [`mobility_pressure_preview.png`](outputs/maps/mobility_pressure_preview.png) | Static preview of high-pressure modeled roads. |
 
 ## Published tables and summaries
 
@@ -189,6 +204,9 @@ replace the proxy when a validated gridded population source is available.
 | [`population_equity_cells.csv`](outputs/tables/population_equity_cells.csv) | Cell-level weights, service gaps, walking times, and 15-minute access. |
 | [`population_equity_rankings.csv`](outputs/tables/population_equity_rankings.csv) | Highest equity-gap cells by service type. |
 | [`population_equity_summary.json`](outputs/tables/population_equity_summary.json) | Weighted service statistics, source label, and interpretation limits. |
+| [`mobility_pressure_top.csv`](outputs/tables/mobility_pressure_top.csv) | Ranked modeled pressure roads and route counts. |
+| [`intersection_pressure_top.csv`](outputs/tables/intersection_pressure_top.csv) | Ranked modeled pressure intersections. |
+| [`mobility_pressure_summary.json`](outputs/tables/mobility_pressure_summary.json) | Graph, route-sampling, proxy, and interpretation summary. |
 
 ## Run the project
 
@@ -201,6 +219,7 @@ dhakagraph-overture
 dhakagraph-urban
 dhakagraph-flood
 dhakagraph-equity
+dhakagraph-mobility
 ```
 
 For environment setup and reproducibility notes, see

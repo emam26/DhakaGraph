@@ -1,0 +1,15 @@
+{
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "graph_nodes": 42150,
+  "graph_edges": 55732,
+  "graph_components_used": 1,
+  "origin_cells": 80,
+  "destination_cells": 80,
+  "routed_pairs": 6372,
+  "pressure_edges": 11577,
+  "method": "Weighted origin-destination shortest paths over largest Overture graph component",
+  "origin_proxy": "Mapped building density, footprint share, and residential land-use share",
+  "destination_proxy": "Mapped POI, retail, transport, healthcare, and education density",
+  "interpretation": "Modeled potential movement pressure, not observed traffic volume or road usage.",
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation"
+}
