@@ -1,0 +1,413 @@
+{
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "base_nodes": 43330,
+  "base_edges": 56804,
+  "base_graph_components": 214,
+  "scenarios": [
+    {
+      "water_level_m": 0.5,
+      "surviving_edges": 56804,
+      "inundated_edges": 0,
+      "inundated_edge_percent": 0.0,
+      "connected_components": 214,
+      "largest_component_nodes": 42150,
+      "largest_component_share": 0.9728,
+      "connected_anchor_pairs": "15/21"
+    },
+    {
+      "water_level_m": 1.0,
+      "surviving_edges": 56804,
+      "inundated_edges": 0,
+      "inundated_edge_percent": 0.0,
+      "connected_components": 214,
+      "largest_component_nodes": 42150,
+      "largest_component_share": 0.9728,
+      "connected_anchor_pairs": "15/21"
+    },
+    {
+      "water_level_m": 1.5,
+      "surviving_edges": 51392,
+      "inundated_edges": 5412,
+      "inundated_edge_percent": 9.53,
+      "connected_components": 3871,
+      "largest_component_nodes": 37535,
+      "largest_component_share": 0.8663,
+      "connected_anchor_pairs": "15/21"
+    },
+    {
+      "water_level_m": 2.0,
+      "surviving_edges": 44015,
+      "inundated_edges": 12789,
+      "inundated_edge_percent": 22.51,
+      "connected_components": 8997,
+      "largest_component_nodes": 28092,
+      "largest_component_share": 0.6483,
+      "connected_anchor_pairs": "6/21"
+    },
+    {
+      "water_level_m": 3.0,
+      "surviving_edges": 25654,
+      "inundated_edges": 31150,
+      "inundated_edge_percent": 54.84,
+      "connected_components": 22939,
+      "largest_component_nodes": 5590,
+      "largest_component_share": 0.129,
+      "connected_anchor_pairs": "0/21"
+    }
+  ],
+  "vulnerable_edges_top50": [
+    {
+      "node_from": "22",
+      "node_to": "35775",
+      "min_elevation_m": 1.41,
+      "length_m": 97.8,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "23",
+      "node_to": "35776",
+      "min_elevation_m": 1.44,
+      "length_m": 69.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "24",
+      "node_to": "27",
+      "min_elevation_m": 1.48,
+      "length_m": 136.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "25",
+      "node_to": "27",
+      "min_elevation_m": 1.48,
+      "length_m": 53.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "27",
+      "node_to": "35777",
+      "min_elevation_m": 1.21,
+      "length_m": 16.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "35791",
+      "node_to": "67",
+      "min_elevation_m": 1.4,
+      "length_m": 13.7,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "89",
+      "node_to": "90",
+      "min_elevation_m": 1.4,
+      "length_m": 22.3,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "93",
+      "node_to": "95",
+      "min_elevation_m": 1.26,
+      "length_m": 80.9,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "114",
+      "node_to": "95",
+      "min_elevation_m": 1.26,
+      "length_m": 80.8,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "95",
+      "node_to": "97",
+      "min_elevation_m": 1.26,
+      "length_m": 69.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "96",
+      "node_to": "97",
+      "min_elevation_m": 1.47,
+      "length_m": 81.1,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "151",
+      "node_to": "202",
+      "min_elevation_m": 1.47,
+      "length_m": 80.3,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "158",
+      "node_to": "196",
+      "min_elevation_m": 1.3,
+      "length_m": 34.9,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "159",
+      "node_to": "35817",
+      "min_elevation_m": 1.41,
+      "length_m": 81.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "159",
+      "node_to": "35818",
+      "min_elevation_m": 1.41,
+      "length_m": 111.7,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "159",
+      "node_to": "167",
+      "min_elevation_m": 1.41,
+      "length_m": 93.9,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "178",
+      "node_to": "179",
+      "min_elevation_m": 1.44,
+      "length_m": 37.6,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "179",
+      "node_to": "180",
+      "min_elevation_m": 1.44,
+      "length_m": 206.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "179",
+      "node_to": "182",
+      "min_elevation_m": 1.44,
+      "length_m": 78.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "179",
+      "node_to": "194",
+      "min_elevation_m": 1.44,
+      "length_m": 94.9,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "195",
+      "node_to": "196",
+      "min_elevation_m": 1.31,
+      "length_m": 172.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "196",
+      "node_to": "221",
+      "min_elevation_m": 1.31,
+      "length_m": 76.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "200",
+      "node_to": "220",
+      "min_elevation_m": 1.35,
+      "length_m": 153.1,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "202",
+      "node_to": "207",
+      "min_elevation_m": 1.31,
+      "length_m": 84.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "202",
+      "node_to": "211",
+      "min_elevation_m": 1.32,
+      "length_m": 34.9,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "203",
+      "node_to": "35832",
+      "min_elevation_m": 1.24,
+      "length_m": 5.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "203",
+      "node_to": "204",
+      "min_elevation_m": 1.32,
+      "length_m": 8.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "204",
+      "node_to": "206",
+      "min_elevation_m": 1.44,
+      "length_m": 19.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "204",
+      "node_to": "205",
+      "min_elevation_m": 1.36,
+      "length_m": 9.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "205",
+      "node_to": "208",
+      "min_elevation_m": 1.3,
+      "length_m": 30.7,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "207",
+      "node_to": "208",
+      "min_elevation_m": 1.3,
+      "length_m": 11.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "207",
+      "node_to": "212",
+      "min_elevation_m": 1.31,
+      "length_m": 44.3,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "208",
+      "node_to": "213",
+      "min_elevation_m": 1.3,
+      "length_m": 35.4,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "211",
+      "node_to": "216",
+      "min_elevation_m": 1.32,
+      "length_m": 40.8,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "211",
+      "node_to": "220",
+      "min_elevation_m": 1.32,
+      "length_m": 68.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "215",
+      "node_to": "35835",
+      "min_elevation_m": 1.34,
+      "length_m": 31.5,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "220",
+      "node_to": "252",
+      "min_elevation_m": 1.35,
+      "length_m": 115.6,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "232",
+      "node_to": "252",
+      "min_elevation_m": 1.26,
+      "length_m": 32.3,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "232",
+      "node_to": "251",
+      "min_elevation_m": 1.24,
+      "length_m": 89.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "232",
+      "node_to": "303",
+      "min_elevation_m": 1.22,
+      "length_m": 101.1,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "233",
+      "node_to": "311",
+      "min_elevation_m": 1.3,
+      "length_m": 96.1,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "233",
+      "node_to": "249",
+      "min_elevation_m": 1.3,
+      "length_m": 15.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "233",
+      "node_to": "247",
+      "min_elevation_m": 1.3,
+      "length_m": 73.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "247",
+      "node_to": "309",
+      "min_elevation_m": 1.3,
+      "length_m": 55.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "247",
+      "node_to": "250",
+      "min_elevation_m": 1.28,
+      "length_m": 65.6,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "250",
+      "node_to": "319",
+      "min_elevation_m": 1.28,
+      "length_m": 40.1,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "250",
+      "node_to": "304",
+      "min_elevation_m": 1.28,
+      "length_m": 24.3,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "255",
+      "node_to": "299",
+      "min_elevation_m": 1.38,
+      "length_m": 137.0,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "255",
+      "node_to": "290",
+      "min_elevation_m": 1.47,
+      "length_m": 5.2,
+      "inundation_frequency": 3
+    },
+    {
+      "node_from": "269",
+      "node_to": "290",
+      "min_elevation_m": 1.47,
+      "length_m": 135.6,
+      "inundation_frequency": 3
+    }
+  ],
+  "elevation_model": "Distance-to-water proxy, clipped to 1-10 m",
+  "interpretation": "Modeled network disruption scenarios for sensitivity analysis; not observed flood depths or an official hazard forecast.",
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation"
+}

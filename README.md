@@ -5,7 +5,8 @@
 **[Open the live road graph](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)** |
 **[Explore Overture Maps](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)** |
 **[Explore the urban atlas](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)** |
-**[Explore service access](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)**
+**[Explore service access](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)** |
+**[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)**
 
 DhakaGraph is a fun, learning-oriented study of Dhaka as a spatial graph. It
 asks what the mapped road network, buildings, places, land use, and services
@@ -115,6 +116,19 @@ like a high-building, retail-rich area, or where are there places with a
 similar structure but weaker service access? Similarity is a feature-profile
 comparison, not a claim of social, cultural, or demographic equivalence.
 
+### 6. Flood-resilience scenarios
+
+The flood simulation tests how the connector-split road graph changes under
+modeled water levels of 0.5, 1.0, 1.5, 2.0, and 3.0 m. At the 1.5 m scenario,
+the current proxy marks **9.5% of graph edges** as inundated; at 2.0 m it marks
+**22.5%**, and at 3.0 m it marks **54.8%**. Anchor-pair connectivity falls from
+15/21 at the lower scenarios to 6/21 at 2.0 m and 0/21 at 3.0 m.
+
+These are sensitivity scenarios based on a distance-to-water elevation proxy.
+They are useful for testing network fragility, but they are not measured flood
+depths or an official forecast. Historical flood products should be added before
+using the results for planning decisions.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -131,6 +145,8 @@ comparison, not a claim of social, cultural, or demographic equivalence.
 | [`service_accessibility_preview.png`](outputs/maps/service_accessibility_preview.png) | Static service-accessibility preview. |
 | [`neighborhood_similarity.html`](outputs/maps/neighborhood_similarity.html) | Interactive reference-neighborhood similarity explorer. |
 | [`neighborhood_similarity_preview.png`](outputs/maps/neighborhood_similarity_preview.png) | Static similarity preview for four reference areas. |
+| [`flood_simulation.html`](outputs/maps/flood_simulation.html) | Interactive modeled flood-level road-disruption map. |
+| [`flood_simulation_preview.png`](outputs/maps/flood_simulation_preview.png) | Static comparison of four flood scenarios. |
 
 ## Published tables and summaries
 
@@ -151,6 +167,8 @@ comparison, not a claim of social, cultural, or demographic equivalence.
 | [`neighborhood_similarity_cells.csv`](outputs/tables/neighborhood_similarity_cells.csv) | One row per cell with similarity scores for all seven anchors. |
 | [`neighborhood_similarity_rankings.csv`](outputs/tables/neighborhood_similarity_rankings.csv) | Top ten matching cells for each reference neighborhood. |
 | [`neighborhood_similarity_summary.json`](outputs/tables/neighborhood_similarity_summary.json) | Feature list, anchor-cell matches, method, and interpretation notes. |
+| [`flood_cascade_summary.json`](outputs/tables/flood_cascade_summary.json) | Modeled flood scenarios, connectivity changes, assumptions, and caveats. |
+| [`vulnerable_roads.csv`](outputs/tables/vulnerable_roads.csv) | Road edges ranked by repeated inundation across modeled scenarios. |
 
 ## Run the project
 
@@ -161,6 +179,7 @@ the pilot outputs:
 dhakagraph-pilot
 dhakagraph-overture
 dhakagraph-urban
+dhakagraph-flood
 ```
 
 For environment setup and reproducibility notes, see

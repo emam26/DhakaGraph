@@ -44,6 +44,11 @@ Overlay documented flood depth or duration data, define transparent edge-cost
 rules, and compare normal and disrupted accessibility. Keep scenario outputs
 separate from claims about observed events.
 
+Status: a first network-sensitivity simulation is published using transparent
+distance-to-water elevation proxies. It currently ranks inundated road edges and
+anchor connectivity; historical flood-depth layers and cell-level service-loss
+analysis remain the next improvement.
+
 ## Milestone 6: optional graph learning
 
 Introduce PyTorch Geometric only after a useful target, labels, baseline, and

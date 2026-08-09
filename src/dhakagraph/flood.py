@@ -12,8 +12,8 @@ import networkx as nx
 import numpy as np
 from shapely.geometry import Point
 
-from dhakagraph.config import EXPANDED_DHAKA_STUDY, METRIC_CRS, StudyArea
-from dhakagraph.overture import load_or_download_overture, process_overture_roads
+from dhakagraph.config import EXPANDED_DHAKA_STUDY, StudyArea
+from dhakagraph.overture import METRIC_CRS, load_or_download_overture, process_overture_roads
 
 
 def project_root() -> Path:
@@ -56,6 +56,8 @@ def build_flood_model(
     water_gdf = layers.get("water", gpd.GeoDataFrame())
 
     nodes_proj = road_nodes.to_crs(METRIC_CRS).copy()
+    if "node_id" not in nodes_proj:
+        nodes_proj["node_id"] = nodes_proj.index.astype(str)
     nodes_proj["elevation_m"] = estimate_node_elevations(road_nodes, water_gdf)
     elev_lookup = dict(
         zip(
@@ -75,7 +77,7 @@ def build_flood_model(
             elevation=row.elevation_m,
         )
 
-    edges_proj = road_edges.to_crs(METRIC_CRS)
+    edges_proj = road_edges.to_crs(METRIC_CRS).reset_index()
     for row in edges_proj.itertuples():
         u = str(row.from_node_id)
         v = str(row.to_node_id)
@@ -171,6 +173,7 @@ def build_flood_model(
     return {
         "base_nodes": base_graph.number_of_nodes(),
         "base_edges": base_graph.number_of_edges(),
+        "base_graph_components": nx.number_connected_components(base_graph),
         "scenarios": scenario_results,
         "vulnerable_edges": ranked_vulnerable_edges,
         "base_graph": base_graph,
@@ -195,8 +198,15 @@ def export_flood_outputs(
         "study_area": area.name,
         "base_nodes": flood_model["base_nodes"],
         "base_edges": flood_model["base_edges"],
+        "base_graph_components": flood_model.get("base_graph_components"),
         "scenarios": flood_model["scenarios"],
         "vulnerable_edges_top50": flood_model["vulnerable_edges"],
+        "elevation_model": "Distance-to-water proxy, clipped to 1-10 m",
+        "interpretation": (
+            "Modeled network disruption scenarios for sensitivity analysis; "
+            "not observed flood depths or an official hazard forecast."
+        ),
+        "data_attribution": "© OpenStreetMap contributors, Overture Maps Foundation",
     }
     output_summary_json.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 

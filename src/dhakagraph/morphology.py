@@ -11,8 +11,8 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import Point
 
-from dhakagraph.config import EXPANDED_DHAKA_STUDY, METRIC_CRS, StudyArea
-from dhakagraph.overture import load_or_download_overture
+from dhakagraph.config import EXPANDED_DHAKA_STUDY, StudyArea
+from dhakagraph.overture import METRIC_CRS, load_or_download_overture
 
 
 def project_root() -> Path:

@@ -4,6 +4,7 @@ import csv
 
 from dhakagraph.config import EXPANDED_DHAKA_STUDY
 from dhakagraph.flood import build_flood_model, export_flood_outputs, project_root
+from dhakagraph.flood_maps import build_flood_preview
 
 
 def main() -> None:
@@ -12,10 +13,12 @@ def main() -> None:
     output_html = root / "outputs" / "maps" / "flood_simulation.html"
     output_json = root / "outputs" / "tables" / "flood_cascade_summary.json"
     output_csv = root / "outputs" / "tables" / "vulnerable_roads.csv"
+    output_preview = root / "outputs" / "maps" / "flood_simulation_preview.png"
 
     print("Running Dhaka Flood Cascade Simulation...")
     model = build_flood_model(EXPANDED_DHAKA_STUDY)
     export_flood_outputs(model, EXPANDED_DHAKA_STUDY, output_html, output_json)
+    build_flood_preview(model, output_preview)
 
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     if model["vulnerable_edges"]:
