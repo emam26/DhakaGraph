@@ -1,6 +1,6 @@
 # DhakaGraph
 
-[![Dhaka road-network graph](outputs/maps/network_explorer_desktop.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
+[![Dhaka City heterogeneous graph](outputs/maps/network_graph_thumbnail.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
 
 **[Open the live road graph](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)** |
 **[Explore Overture Maps](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)** |
@@ -33,8 +33,8 @@ See [the study-area definition](docs/STUDY_AREA.md) and
 
 | Road network | Overture urban layers |
 | --- | --- |
-| [![Road-network explorer](outputs/maps/network_explorer_desktop.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html) | [![Overture layer explorer](outputs/maps/overture_preview.png)](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html) |
-| [Open the network explorer](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html) | [Open the Overture explorer](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html) |
+| [![Dhaka City graph explorer](outputs/maps/network_graph_thumbnail.png)](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html) | [![Overture layer explorer](outputs/maps/overture_preview.png)](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html) |
+| [Open the City2Graph-style Dhaka graph](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html) | [Open the Overture explorer](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html) |
 
 | Urban function atlas | Service accessibility |
 | --- | --- |
@@ -53,6 +53,12 @@ ranked intersections.
 
 The highest-ranked roads and intersections are structurally important in the
 mapped network. They are not automatically the roads people use most.
+
+The main graph explorer presents a City2Graph-style heterogeneous view: road
+segments and intersections are public graph elements, sampled building
+footprints and representative points are private elements, and the 750 m
+analysis cells provide a spatial context layer. Red and blue cross-layer
+relations are modeled map relationships for exploration, not observed trips.
 
 ### 2. Mapped urban coverage
 
@@ -177,8 +183,8 @@ proxy when spatial monitoring data are available.
 | --- | --- |
 | [`centrality_map.html`](outputs/maps/centrality_map.html) | Static-style interactive map of structural centrality. |
 | [`centrality_preview.png`](outputs/maps/centrality_preview.png) | Full-size preview of the centrality map. |
-| [`network_explorer.html`](outputs/maps/network_explorer.html) | Main interactive road-network dashboard. |
-| [`network_explorer_desktop.png`](outputs/maps/network_explorer_desktop.png) | README thumbnail for the road graph. |
+| [`network_explorer.html`](outputs/maps/network_explorer.html) | Main interactive City2Graph-style heterogeneous graph of Dhaka roads, buildings, cells, and cross-layer relations. |
+| [`network_graph_thumbnail.png`](outputs/maps/network_graph_thumbnail.png) | Dhaka graph viewport cropped from the main interactive page for the README. |
 | [`overture_explorer.html`](outputs/maps/overture_explorer.html) | Interactive Overture buildings, roads, places, land use, and water. |
 | [`overture_preview.png`](outputs/maps/overture_preview.png) | Four-panel Overture coverage preview. |
 | [`urban_atlas.html`](outputs/maps/urban_atlas.html) | Interactive 750 m urban-function atlas with switchable metrics. |

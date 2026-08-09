@@ -13,8 +13,9 @@ from dhakagraph.analysis import (
     rank_intersections,
     to_simple_undirected,
 )
+from dhakagraph.city_graph import build_city_graph_explorer
 from dhakagraph.config import STUDY_AREAS
-from dhakagraph.explorer import build_network_explorer, build_network_profile
+from dhakagraph.explorer import build_network_profile
 from dhakagraph.maps import build_centrality_map, build_static_preview
 from dhakagraph.osm import city2graph_frames, export_spatial_layers, load_or_download_graph
 
@@ -113,15 +114,7 @@ def build_pilot(
     _write_csv(ranking_path, ranked)
     _write_json(profile_path, profile)
     build_centrality_map(graph, ranked, area, map_path)
-    build_network_explorer(
-        graph,
-        analysis_graph,
-        scores,
-        summary,
-        profile,
-        area,
-        explorer_path,
-    )
+    build_city_graph_explorer(area, processed_dir, raw_dir, explorer_path)
     build_static_preview(graph, ranked, area, preview_path)
 
     return {
