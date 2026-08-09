@@ -18,7 +18,7 @@ def test_similarity_scores_are_bounded_and_rankings_are_created() -> None:
             "service_desert_score": [80.0, 78.0, 20.0, 18.0],
         },
         geometry=[box(i, 0, i + 1, 1) for i in range(4)],
-        crs="EPSG:3857",
+        crs="EPSG:4326",
     )
     area = StudyArea(
         slug="test",
