@@ -2,8 +2,9 @@
 
 import geopandas as gpd
 import numpy as np
-from shapely.geometry import Point
+from shapely.geometry import LineString, Point, box
 
+from dhakagraph.accessibility import build_service_accessibility
 from dhakagraph.config import EXPANDED_DHAKA_STUDY
 from dhakagraph.urban import (
     classify_urban_functions,
@@ -61,3 +62,50 @@ def test_transparent_cluster_baseline_is_reproducible() -> None:
     assert first["urban_class"].notna().all()
     assert first_summary["cluster_count"] == 3
     assert first_summary == second_summary
+
+
+def test_network_service_accessibility_uses_road_distance() -> None:
+    nodes = gpd.GeoDataFrame(
+        {"node_id": ["0", "1", "2"]},
+        geometry=[Point(0, 0), Point(100, 0), Point(200, 0)],
+        crs="EPSG:32646",
+    )
+    edges = gpd.GeoDataFrame(
+        {
+            "from_node_id": ["0", "1"],
+            "to_node_id": ["1", "2"],
+            "length": [100.0, 100.0],
+        },
+        geometry=[LineString([(0, 0), (100, 0)]), LineString([(100, 0), (200, 0)])],
+        crs="EPSG:32646",
+    )
+    categories = ["hospital", "school", "market", "park", "bus_station"]
+    places = gpd.GeoDataFrame(
+        {"categories": [f'{{"primary":"{category}"}}' for category in categories]},
+        geometry=[Point(0, 0)] * len(categories),
+        crs="EPSG:32646",
+    )
+    cells = gpd.GeoDataFrame(
+        {
+            "cell_id": ["near", "far"],
+            "urban_class": ["test", "test"],
+            "building_density_km2": [100.0, 200.0],
+            "building_footprint_share": [0.1, 0.2],
+            "landuse_residential_share": [0.1, 0.2],
+        },
+        geometry=[box(-10, -10, 10, 10), box(190, -10, 210, 10)],
+        crs="EPSG:32646",
+    )
+
+    result, ranking, summary = build_service_accessibility(
+        cells,
+        places,
+        nodes,
+        edges,
+    )
+
+    assert result.loc[result["cell_id"] == "near", "walk_minutes_healthcare"].iloc[0] == 0
+    assert result.loc[result["cell_id"] == "far", "walk_minutes_healthcare"].iloc[0] == 2.5
+    assert result["walk_healthcare_10min_count"].tolist() == [1, 1]
+    assert len(ranking) == 2
+    assert summary["facility_counts"]["healthcare"] == 1

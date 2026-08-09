@@ -1,0 +1,68 @@
+{
+  "cell_count": 643,
+  "cell_size_m": 750,
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation",
+  "drive_network": "Directed OSM drive graph with OSMnx-inferred speeds",
+  "facility_counts": {
+    "education": 7499,
+    "healthcare": 2467,
+    "market": 5468,
+    "park": 522,
+    "transport": 1398
+  },
+  "interpretation": "Modeled accessibility over mapped roads and facilities; not sidewalk quality, service capacity, population, congestion, or observed trips.",
+  "median_cell_snap_distance_m": 62.27,
+  "method": "Network shortest paths from 750 m cell representative points",
+  "overture_release": "2026-07-22.0",
+  "p90_cell_snap_distance_m": 446.96,
+  "service_desert_definition": "Percentile-ranked nearest walking times and 15-minute facility counts, weighted by a mapped building/residential-intensity proxy.",
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "study_area_slug": "airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+  "transit_network": "Not modeled: no validated Dhaka GTFS feed is included",
+  "unreachable_cell_counts": {
+    "education": 0,
+    "healthcare": 0,
+    "market": 0,
+    "park": 0,
+    "transport": 0
+  },
+  "walk_excluded_small_component_nodes": 1180,
+  "walk_graph_components": 1,
+  "walk_graph_edges": 55732,
+  "walk_graph_nodes": 42150,
+  "walk_network": "Undirected connector-split Overture road graph",
+  "walk_source_components": 214,
+  "walk_speed_km_h": 4.8,
+  "walk_statistics": {
+    "education": {
+      "median_nearest_minutes": 5.44,
+      "median_reachable_15min": 8.0,
+      "p90_nearest_minutes": 25.05
+    },
+    "healthcare": {
+      "median_nearest_minutes": 10.38,
+      "median_reachable_15min": 2.0,
+      "p90_nearest_minutes": 43.71
+    },
+    "market": {
+      "median_nearest_minutes": 7.19,
+      "median_reachable_15min": 4.0,
+      "p90_nearest_minutes": 38.51
+    },
+    "park": {
+      "median_nearest_minutes": 13.6,
+      "median_reachable_15min": 1.0,
+      "p90_nearest_minutes": 43.09
+    },
+    "transport": {
+      "median_nearest_minutes": 10.34,
+      "median_reachable_15min": 1.0,
+      "p90_nearest_minutes": 50.43
+    }
+  },
+  "walk_thresholds_minutes": [
+    10,
+    15,
+    30
+  ]
+}

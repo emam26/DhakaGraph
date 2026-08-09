@@ -24,10 +24,13 @@ road geometries remains a future comparison task.
 Attach hospitals, universities, schools, markets, parks, and stations to the
 road graph. Produce distance-based accessibility summaries and isochrones.
 
-Status: the Stage 1 urban-function foundation is complete. It aggregates mapped
-places, land use, buildings, roads, intersections, straight-line service
-distances and contiguity centrality into 643 reproducible 750 m cells. The next
-ordered stage adds road-network walking accessibility and service-desert metrics.
+Status: Stages 1 and 2 are complete. The urban-function foundation aggregates
+mapped places, land use, buildings, roads, intersections, service distances and
+contiguity centrality into 643 reproducible 750 m cells. Network walking times,
+10/15/30-minute service counts, modeled driving comparisons and transparent
+demand-adjusted service-gap scores are now published. Transit remains unmodeled
+until a validated Dhaka GTFS source is available. The next ordered stage adds the
+neighborhood-similarity explorer.
 
 ## Milestone 4: public transport
 

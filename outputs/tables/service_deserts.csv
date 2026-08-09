@@ -1,0 +1,51 @@
+rank,cell_id,urban_class,service_desert_score,service_gap_score,built_intensity_proxy,largest_service_gap,walk_unreachable_service_count,walk_minutes_healthcare,walk_minutes_education,walk_minutes_market,walk_minutes_park,walk_healthcare_15min_count,walk_education_15min_count,walk_market_15min_count,walk_park_15min_count
+1,C000_010,Cluster 1 · market-distant / service-light,66.207,84.973,63.193,healthcare,0,76.55,24.601,42.862,24.601,0,0,0,0
+2,C016_029,Cluster 7 · residential land use / road-dense,65.428,75.476,77.812,park,0,38.706,9.01,14.222,53.607,0,2,1,0
+3,C000_011,Cluster 1 · market-distant / service-light,64.959,84.895,60.861,education,0,65.569,34.719,16.458,34.719,0,0,0,0
+4,C015_030,Cluster 1 · market-distant / service-light,63.894,77.051,71.54,park,0,26.867,9.507,17.709,41.963,0,2,0,0
+5,C017_030,Cluster 1 · market-distant / service-light,63.761,79.763,66.563,park,0,40.169,10.257,15.685,55.069,0,1,0,0
+6,C014_019,Cluster 6 · high building coverage / retail-rich,63.239,76.983,70.244,market,0,26.012,8.174,26.558,30.099,0,1,0,0
+7,C016_030,Cluster 7 · residential land use / road-dense,61.821,69.012,82.633,park,0,33.693,3.359,9.209,48.593,0,3,1,0
+8,C019_030,Cluster 1 · market-distant / service-light,60.458,87.753,48.16,education,0,57.077,38.249,36.499,45.417,0,0,0,0
+9,C015_029,Cluster 7 · residential land use / road-dense,60.067,64.804,87.818,park,0,20.97,6.859,6.536,35.87,0,10,3,0
+10,C003_014,Cluster 3 · building-dense / limited recreation POIs,59.659,69.168,77.087,healthcare,0,28.64,12.127,12.127,27.21,0,5,6,0
+11,C001_021,Cluster 5 · limited retail / low building coverage,58.189,87.033,44.764,market,0,70.446,21.116,70.818,38.775,0,0,0,0
+12,C014_028,Cluster 7 · residential land use / road-dense,57.558,65.319,80.197,market,0,16.209,2.987,16.209,21.769,0,9,0,0
+13,C000_021,Cluster 1 · market-distant / service-light,57.409,85.867,44.764,market,0,62.948,25.04,85.476,25.04,0,0,0,0
+14,C002_015,Cluster 4 · road-sparse / intersection-sparse,57.212,81.804,49.896,healthcare,0,40.934,14.435,15.816,39.504,0,0,0,0
+15,C022_029,Cluster 1 · market-distant / service-light,56.78,88.939,39.736,market,0,79.797,25.01,59.219,68.137,0,0,0,0
+16,C020_016,Cluster 5 · limited retail / low building coverage,56.329,82.523,47.097,education,0,32.219,18.781,20.259,37.236,0,0,0,0
+17,C014_030,Cluster 1 · market-distant / service-light,56.005,65.883,75.013,park,0,15.538,6.531,11.435,30.634,0,6,2,0
+18,C019_006,Cluster 3 · building-dense / limited recreation POIs,55.644,82.232,46.112,education,0,30.907,23.305,16.803,35.91,0,0,0,0
+19,C015_028,Cluster 5 · limited retail / low building coverage,55.247,68.526,67.703,park,0,24.815,5.398,12.443,39.715,0,5,2,0
+20,C012_030,Cluster 7 · residential land use / road-dense,55.13,58.729,89.787,park,0,9.966,12.094,11.091,19.579,9,4,3,0
+21,C003_007,Cluster 1 · market-distant / service-light,55.016,78.752,49.767,education,0,31.031,31.372,12.438,30.412,0,0,1,0
+22,C011_030,Cluster 1 · market-distant / service-light,54.698,71.267,61.249,market,0,18.7,9.329,18.493,18.203,0,3,0,0
+23,C017_029,Cluster 5 · limited retail / low building coverage,53.932,75.816,51.892,education,0,21.659,21.342,11.31,30.105,0,0,1,0
+24,C002_014,Cluster 3 · building-dense / limited recreation POIs,53.751,62.364,76.983,healthcare,0,27.602,6.558,3.837,26.172,0,6,8,0
+25,C004_027,Cluster 5 · limited retail / low building coverage,53.575,78.596,46.941,market,0,26.01,7.737,94.714,44.427,0,3,0,0
+26,C023_012,Cluster 1 · market-distant / service-light,53.539,88.977,33.618,education,0,43.765,71.463,72.361,56.123,0,0,0,0
+27,C007_030,Cluster 1 · market-distant / service-light,53.107,76.137,49.585,market,0,26.027,11.201,17.911,29.609,0,2,0,0
+28,C001_009,Cluster 1 · market-distant / service-light,52.979,76.312,49.041,education,0,36.13,33.802,24.287,12.86,0,0,0,1
+29,C021_024,Cluster 4 · road-sparse / intersection-sparse,52.246,83.009,38.232,park,0,35.397,15.118,16.783,61.463,0,0,0,0
+30,C002_013,Cluster 3 · building-dense / limited recreation POIs,52.121,66.602,63.764,healthcare,0,26.084,10.585,9.3,24.654,0,5,7,0
+31,C017_011,Cluster 3 · building-dense / limited recreation POIs,52.094,68.332,60.394,market,0,13.427,13.427,15.657,21.268,2,2,0,0
+32,C013_000,Cluster 3 · building-dense / limited recreation POIs,51.867,61.703,73.432,healthcare,0,24.657,10.262,12.9,13.599,0,4,4,1
+33,C001_022,Cluster 5 · limited retail / low building coverage,51.855,80.91,40.15,market,0,52.132,14.224,74.66,14.224,0,0,0,0
+34,C020_011,Cluster 5 · limited retail / low building coverage,51.787,82.018,38.569,education,0,21.8,28.301,17.766,39.572,0,0,0,0
+35,C001_020,Cluster 5 · limited retail / low building coverage,51.696,88.453,30.741,market,0,76.245,26.915,76.616,44.574,0,0,0,0
+36,C018_029,Cluster 4 · road-sparse / intersection-sparse,51.669,83.748,36.159,education,0,43.485,24.657,22.907,31.826,0,0,0,0
+37,C010_022,Cluster 3 · building-dense / limited recreation POIs,51.587,73.484,50.337,market,0,27.317,9.53,21.346,18.745,0,3,0,0
+38,C002_012,Cluster 5 · limited retail / low building coverage,51.57,82.018,38.129,education,0,35.558,16.414,18.775,34.128,0,0,0,0
+39,C022_022,Cluster 5 · limited retail / low building coverage,51.345,85.731,33.152,education,0,40.491,31.269,34.116,36.638,0,0,0,0
+40,C023_023,Cluster 1 · market-distant / service-light,51.245,87.286,31.182,education,0,47.134,37.913,40.76,43.281,0,0,0,0
+41,C022_030,Cluster 1 · market-distant / service-light,51.232,89.638,28.59,education,0,85.493,30.706,64.915,73.834,0,0,0,0
+42,C020_010,Cluster 5 · limited retail / low building coverage,51.034,76.03,45.205,education,0,22.645,16.142,12.334,33.091,0,0,1,0
+43,C003_012,Cluster 5 · limited retail / low building coverage,51.033,74.106,48.108,healthcare,0,25.847,14.869,14.64,26.307,0,1,1,0
+44,C023_024,Cluster 1 · market-distant / service-light,50.788,89.055,28.383,education,0,56.798,47.576,50.423,52.945,0,0,0,0
+45,C023_021,Cluster 1 · market-distant / service-light,50.465,81.551,36.47,education,0,30.019,20.798,23.644,26.166,0,0,0,0
+46,C021_013,Cluster 5 · limited retail / low building coverage,50.358,74.164,46.501,education,0,9.523,32.845,33.744,17.506,1,0,0,0
+47,C021_030,Cluster 1 · market-distant / service-light,50.356,88.977,27.657,education,0,63.562,44.734,42.984,51.903,0,0,0,0
+48,C022_023,Cluster 5 · limited retail / low building coverage,50.155,88.55,27.735,education,0,53.198,43.976,46.823,49.345,0,0,0,0
+49,C021_027,Cluster 5 · limited retail / low building coverage,50.077,85.342,31.13,healthcare,0,53.822,17.351,33.245,42.163,0,0,0,0
+50,C022_028,Cluster 1 · market-distant / service-light,50.048,84.001,32.633,healthcare,0,66.265,11.479,45.688,54.606,0,1,0,0

@@ -8,7 +8,14 @@ from pathlib import Path
 from typing import Any
 
 import geopandas as gpd
+import osmnx as ox
+import pandas as pd
 
+from dhakagraph.accessibility import build_service_accessibility
+from dhakagraph.accessibility_maps import (
+    build_accessibility_explorer,
+    build_accessibility_preview,
+)
 from dhakagraph.config import STUDY_AREAS
 from dhakagraph.overture import (
     OVERTURE_RELEASE,
@@ -133,22 +140,99 @@ def build_urban_stage_one(
     }
 
 
+def build_urban_stage_two(
+    *,
+    area_key: str = "expanded",
+    release: str = OVERTURE_RELEASE,
+    cell_size_m: int = CELL_SIZE_M,
+) -> dict[str, Path]:
+    """Build network service-accessibility and service-desert outputs."""
+    if area_key not in STUDY_AREAS:
+        choices = ", ".join(sorted(STUDY_AREAS))
+        raise ValueError(f"unknown study area {area_key!r}; choose from: {choices}")
+    area = STUDY_AREAS[area_key]
+    root = project_root()
+    atlas_path = (
+        root
+        / "data"
+        / "processed"
+        / "urban"
+        / f"{area.slug}_urban_cells.geojson"
+    )
+    if not atlas_path.exists():
+        build_urban_stage_one(
+            area_key=area_key,
+            release=release,
+            cell_size_m=cell_size_m,
+        )
+    cells = gpd.read_file(atlas_path)
+    layers, _ = load_or_download_overture(
+        area,
+        root / "data" / "raw",
+        release=release,
+        types=("place",),
+    )
+    _, road_nodes, road_edges = _load_or_build_graph_products(root, area_key, release)
+    drive_path = root / "data" / "raw" / f"{area.slug}_{area.network_type}.graphml"
+    drive_graph = ox.load_graphml(drive_path) if drive_path.exists() else None
+    access_cells, ranking, summary = build_service_accessibility(
+        cells,
+        layers["place"],
+        road_nodes,
+        road_edges,
+        drive_graph,
+    )
+    summary.update(
+        {
+            "study_area": area.name,
+            "study_area_slug": area.slug,
+            "cell_size_m": cell_size_m,
+            "cell_count": len(access_cells),
+            "overture_release": release,
+            "data_attribution": "© OpenStreetMap contributors, Overture Maps Foundation",
+        }
+    )
+
+    processed_dir = root / "data" / "processed" / "urban"
+    tables_dir = root / "outputs" / "tables"
+    maps_dir = root / "outputs" / "maps"
+    processed_path = processed_dir / f"{area.slug}_service_accessibility.geojson"
+    cells_table_path = tables_dir / "service_accessibility_cells.csv"
+    ranking_path = tables_dir / "service_deserts.csv"
+    summary_path = tables_dir / "service_accessibility_summary.json"
+    explorer_path = maps_dir / "service_accessibility.html"
+    preview_path = maps_dir / "service_accessibility_preview.png"
+
+    access_cells.to_crs("EPSG:4326").to_file(processed_path, driver="GeoJSON")
+    access_cells.drop(columns="geometry").round(6).to_csv(cells_table_path, index=False)
+    pd.DataFrame(ranking).to_csv(ranking_path, index=False)
+    _write_json(summary_path, summary)
+    build_accessibility_explorer(access_cells, ranking, summary, area, explorer_path)
+    build_accessibility_preview(access_cells, area, preview_path)
+    return {
+        "cells": processed_path,
+        "cell_table": cells_table_path,
+        "ranking": ranking_path,
+        "summary": summary_path,
+        "explorer": explorer_path,
+        "preview": preview_path,
+    }
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--area", choices=sorted(STUDY_AREAS), default="expanded")
     parser.add_argument("--release", default=OVERTURE_RELEASE)
     parser.add_argument("--cell-size", type=int, default=CELL_SIZE_M, dest="cell_size_m")
+    parser.add_argument("--through-stage", type=int, choices=(1, 2), default=2)
     return parser
 
 
 def main() -> None:
     args = _parser().parse_args()
-    outputs = build_urban_stage_one(
-        area_key=args.area,
-        release=args.release,
-        cell_size_m=args.cell_size_m,
-    )
-    print("DhakaGraph urban stage 1 completed:")
+    builder = build_urban_stage_one if args.through_stage == 1 else build_urban_stage_two
+    outputs = builder(area_key=args.area, release=args.release, cell_size_m=args.cell_size_m)
+    print(f"DhakaGraph urban stage {args.through_stage} completed:")
     for name, path in outputs.items():
         print(f"  {name}: {path}")
 

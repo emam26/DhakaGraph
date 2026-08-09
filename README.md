@@ -4,7 +4,8 @@
 
 **[Open the live road-network explorer →](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)** ·
 **[Explore the Overture urban layers →](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)** ·
-**[Open the Urban Function Atlas →](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)**
+**[Open the Urban Function Atlas →](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)** ·
+**[Explore service accessibility →](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)**
 
 DhakaGraph is a learning-oriented exploration of Dhaka as a spatial graph. The
 project begins with roads and intersections, then adds places, public transport,
@@ -104,6 +105,20 @@ official land-use classes or evidence of observed human activity. Sparse or
 constant variables are recorded and excluded from clustering rather than allowed
 to create misleading one-cell classes.
 
+Stage 2 snaps cells and mapped services to the largest connected component of
+the connector-split Overture road graph. It calculates nearest-service walking
+times, facility counts within 10/15/30 modeled walking minutes, an OSM-based
+driving comparison, and a demand-adjusted service-gap score.
+
+[![Dhaka service-accessibility preview](outputs/maps/service_accessibility_preview.png)](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)
+
+Median modeled nearest-service times are 5.4 minutes for education, 10.4 for
+healthcare, 7.2 for markets, 13.6 for parks, and 10.3 for transport POIs. These
+are network-model results at an assumed 4.8 km/h walking speed—not observed trips,
+sidewalk audits, service capacity or population accessibility. Public transport
+is explicitly not modeled because the project does not yet include validated
+Dhaka GTFS data.
+
 ## Outputs
 
 The latest expanded Dhaka pilot snapshot is available online:
@@ -111,6 +126,7 @@ The latest expanded Dhaka pilot snapshot is available online:
 - [Explore the dynamic network dashboard](https://emam26.github.io/DhakaGraph/outputs/maps/network_explorer.html)
 - [Explore Overture buildings, places, roads, land use, and water](https://emam26.github.io/DhakaGraph/outputs/maps/overture_explorer.html)
 - [Explore the 750 m Dhaka Urban Function Atlas](https://emam26.github.io/DhakaGraph/outputs/maps/urban_atlas.html)
+- [Explore modeled service accessibility and service deserts](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)
 - [Open the interactive centrality map](https://emam26.github.io/DhakaGraph/outputs/maps/centrality_map.html)
 - [View the full-size static map](outputs/maps/centrality_preview.png)
 - [View the Overture four-panel preview](outputs/maps/overture_preview.png)
@@ -118,6 +134,8 @@ The latest expanded Dhaka pilot snapshot is available online:
 - [Read the Overture summary](outputs/tables/overture_summary.json)
 - [Read the urban-atlas methodology and summary](outputs/tables/urban_atlas_summary.json)
 - [Download the urban cell feature table](outputs/tables/urban_atlas_cells.csv)
+- [Read the service-accessibility summary](outputs/tables/service_accessibility_summary.json)
+- [Browse the highest demand-adjusted service gaps](outputs/tables/service_deserts.csv)
 - [Inspect the Overture layer audit](outputs/tables/overture_layer_audit.csv)
 - [Browse Overture POI and land-use rankings](outputs/tables/overture_poi_categories.csv)
 - [Read the extended network profile](outputs/tables/network_profile.json)
@@ -154,6 +172,11 @@ outputs/maps/urban_atlas.html
 outputs/maps/urban_atlas_preview.png
 outputs/tables/urban_atlas_summary.json
 outputs/tables/urban_atlas_cells.csv
+outputs/maps/service_accessibility.html
+outputs/maps/service_accessibility_preview.png
+outputs/tables/service_accessibility_summary.json
+outputs/tables/service_accessibility_cells.csv
+outputs/tables/service_deserts.csv
 ```
 
 The published maps, previews, and summaries are versioned as a reproducible pilot
