@@ -8,7 +8,8 @@
 **[Explore service access](https://emam26.github.io/DhakaGraph/outputs/maps/service_accessibility.html)** |
 **[Explore flood scenarios](https://emam26.github.io/DhakaGraph/outputs/maps/flood_simulation.html)** |
 **[Explore service equity](https://emam26.github.io/DhakaGraph/outputs/maps/population_equity.html)** |
-**[Explore mobility pressure](https://emam26.github.io/DhakaGraph/outputs/maps/mobility_pressure.html)**
+**[Explore mobility pressure](https://emam26.github.io/DhakaGraph/outputs/maps/mobility_pressure.html)** |
+**[Explore heat, air, and green space](https://emam26.github.io/DhakaGraph/outputs/maps/environmental_screen.html)**
 
 DhakaGraph is a fun, learning-oriented study of Dhaka as a spatial graph. It
 asks what the mapped road network, buildings, places, land use, and services
@@ -157,6 +158,19 @@ modeled routes. It is a useful network-bottleneck experiment and a candidate
 guide for traffic-count collection, but it is not measured traffic volume or
 proof of the most-used roads.
 
+### 9. Heat, air, and green-space screening
+
+The environmental explorer combines three city-condition signals: built and
+road intensity as a heat proxy, road/building/industrial intensity as an air-
+exposure proxy, and mapped green-space share plus distance to parks as a green
+deficit. The combined burden score highlights cells where several pressures
+overlap.
+
+The current run is a transparent screening baseline. It does not claim to
+measure temperature, PM2.5, or health risk. An optional
+`data/raw/urban/air_quality.csv` file with `cell_id,pm25` can replace the air
+proxy when spatial monitoring data are available.
+
 ## Published maps and previews
 
 | File | What it contains |
@@ -179,6 +193,8 @@ proof of the most-used roads.
 | [`population_equity_preview.png`](outputs/maps/population_equity_preview.png) | Static equity-gap and population-weight preview. |
 | [`mobility_pressure.html`](outputs/maps/mobility_pressure.html) | Interactive modeled origin-destination pressure map. |
 | [`mobility_pressure_preview.png`](outputs/maps/mobility_pressure_preview.png) | Static preview of high-pressure modeled roads. |
+| [`environmental_screen.html`](outputs/maps/environmental_screen.html) | Interactive heat, air-exposure, green-deficit, and combined-burden map. |
+| [`environmental_screen_preview.png`](outputs/maps/environmental_screen_preview.png) | Four-panel environmental screening preview. |
 
 ## Published tables and summaries
 
@@ -207,6 +223,9 @@ proof of the most-used roads.
 | [`mobility_pressure_top.csv`](outputs/tables/mobility_pressure_top.csv) | Ranked modeled pressure roads and route counts. |
 | [`intersection_pressure_top.csv`](outputs/tables/intersection_pressure_top.csv) | Ranked modeled pressure intersections. |
 | [`mobility_pressure_summary.json`](outputs/tables/mobility_pressure_summary.json) | Graph, route-sampling, proxy, and interpretation summary. |
+| [`environmental_screen_cells.csv`](outputs/tables/environmental_screen_cells.csv) | Cell-level environmental scores and burden components. |
+| [`environmental_burden_top.csv`](outputs/tables/environmental_burden_top.csv) | Cells ranked by combined modeled environmental burden. |
+| [`environmental_screen_summary.json`](outputs/tables/environmental_screen_summary.json) | Data source, scoring method, and interpretation limits. |
 
 ## Run the project
 
@@ -220,6 +239,7 @@ dhakagraph-urban
 dhakagraph-flood
 dhakagraph-equity
 dhakagraph-mobility
+dhakagraph-environment
 ```
 
 For environment setup and reproducibility notes, see

@@ -34,6 +34,8 @@ outputs/maps/*
 !outputs/maps/population_equity_preview.png
 !outputs/maps/mobility_pressure.html
 !outputs/maps/mobility_pressure_preview.png
+!outputs/maps/environmental_screen.html
+!outputs/maps/environmental_screen_preview.png
 outputs/tables/*
 !outputs/tables/.gitkeep
 !outputs/tables/network_summary.json
@@ -59,4 +61,7 @@ outputs/tables/*
 !outputs/tables/mobility_pressure_top.csv
 !outputs/tables/intersection_pressure_top.csv
 !outputs/tables/mobility_pressure_summary.json
+!outputs/tables/environmental_screen_cells.csv
+!outputs/tables/environmental_burden_top.csv
+!outputs/tables/environmental_screen_summary.json
 

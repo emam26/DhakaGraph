@@ -1,0 +1,14 @@
+{
+  "cell_count": 643,
+  "air_source": "Modeled road/building/industrial exposure proxy; not measured PM2.5",
+  "metrics": {
+    "heat": "Mapped building/road intensity and low-green-space proxy",
+    "air": "Modeled road/building/industrial exposure proxy; not measured PM2.5",
+    "green": "Mapped green land-use share and modeled distance to parks"
+  },
+  "method": "Percentile-normalized transparent environmental screening scores",
+  "interpretation": "Scores identify cells with higher modeled environmental burden. They are not measured temperature, air pollution, or health-risk estimates.",
+  "study_area": "Expanded Dhaka: Uttara-Airport to Sayedabad, Mirpur to Bashundhara",
+  "study_area_slug": "airport_uttara_mirpur_gulshan_badda_bashundhara_sayedabad",
+  "data_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation"
+}

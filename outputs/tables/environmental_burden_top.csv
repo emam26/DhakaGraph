@@ -1,0 +1,26 @@
+rank,cell_id,environmental_burden_score,heat_exposure_score,air_exposure_score,green_deficit_score,urban_class
+1,C008_002,84.653,96.275,87.636,61.882,Cluster 3 · building-dense / limited recreation POIs
+2,C011_000,84.15,92.138,83.733,71.952,Cluster 3 · building-dense / limited recreation POIs
+3,C016_014,83.457,93.966,84.642,64.984,Cluster 6 · high building coverage / retail-rich
+4,C009_002,82.944,93.437,86.695,60.902,Cluster 3 · building-dense / limited recreation POIs
+5,C013_013,81.735,84.829,92.652,61.501,Cluster 6 · high building coverage / retail-rich
+6,C006_019,81.342,92.17,85.435,58.289,Cluster 6 · high building coverage / retail-rich
+7,C005_015,79.965,87.123,87.889,57.418,Cluster 2 · recreation/culture-rich / transport-POI-rich
+8,C007_018,78.983,94.347,83.204,48.491,Cluster 2 · recreation/culture-rich / transport-POI-rich
+9,C008_018,78.903,92.729,85.902,46.983,Cluster 6 · high building coverage / retail-rich
+10,C007_013,78.687,89.355,78.46,61.936,Cluster 6 · high building coverage / retail-rich
+11,C014_001,78.43,88.188,79.565,61.229,Cluster 6 · high building coverage / retail-rich
+12,C012_000,78.26,87.457,77.582,64.495,Cluster 3 · building-dense / limited recreation POIs
+13,C018_001,78.174,87.652,77.656,63.733,Cluster 2 · recreation/culture-rich / transport-POI-rich
+14,C008_003,78.007,92.737,87.481,41.174,Cluster 6 · high building coverage / retail-rich
+15,C007_015,77.746,93.351,81.82,47.076,Cluster 2 · recreation/culture-rich / transport-POI-rich
+16,C012_001,76.932,87.395,74.635,63.406,Cluster 6 · high building coverage / retail-rich
+17,C018_000,76.078,89.16,82.488,46.174,Cluster 6 · high building coverage / retail-rich
+18,C007_003,76.045,89.37,77.232,53.064,Cluster 3 · building-dense / limited recreation POIs
+19,C016_013,75.161,87.193,80.809,48.002,Cluster 6 · high building coverage / retail-rich
+20,C016_001,74.974,83.74,74.386,61.773,Cluster 6 · high building coverage / retail-rich
+21,C013_000,74.965,85.995,75.086,57.146,Cluster 3 · building-dense / limited recreation POIs
+22,C009_018,74.242,87.745,87.823,33.624,Cluster 6 · high building coverage / retail-rich
+23,C019_000,74.239,85.964,76.198,52.737,Cluster 6 · high building coverage / retail-rich
+24,C008_014,74.174,88.686,80.327,42.341,Cluster 6 · high building coverage / retail-rich
+25,C017_002,73.494,85.373,71.983,56.602,Cluster 6 · high building coverage / retail-rich

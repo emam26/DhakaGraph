@@ -58,7 +58,14 @@ building/residential-origin demand proxies toward mapped destinations and ranks
 potential pressure roads and intersections. Traffic counts, GPS traces, and
 validated public-transport feeds remain necessary for observed-usage claims.
 
-## Milestone 7: optional graph learning
+## Milestone 7: heat, air, and green-space screening
+
+Status: a transparent cell-level environmental screening baseline is now
+published. It combines built/road heat exposure, modeled air exposure, and
+green-space deficit. Spatial air-quality and satellite-temperature inputs remain
+the next data improvements.
+
+## Milestone 8: optional graph learning
 
 Introduce PyTorch Geometric only after a useful target, labels, baseline, and
 evaluation split have been defined.
