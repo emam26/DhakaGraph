@@ -17,16 +17,16 @@ def test_similarity_scores_are_bounded_and_rankings_are_created() -> None:
             "poi_density_km2": [2.0, 2.2, 8.0, 8.2],
             "service_desert_score": [80.0, 78.0, 20.0, 18.0],
         },
-        geometry=[box(i, 0, i + 1, 1) for i in range(4)],
+        geometry=[box(90 + i * 0.01, 23, 90 + (i + 1) * 0.01, 23.01) for i in range(4)],
         crs="EPSG:4326",
     )
     area = StudyArea(
         slug="test",
         name="Test",
-        center_lat=0.5,
-        center_lon=0.5,
-        polygon_lon_lat=((0, 0), (4, 0), (4, 1), (0, 1)),
-        anchors_lon_lat=(("West", 0.5, 0.5), ("East", 3.5, 0.5)),
+        center_lat=23.005,
+        center_lon=90.02,
+        polygon_lon_lat=((90, 23), (90.04, 23), (90.04, 23.01), (90, 23.01)),
+        anchors_lon_lat=(("West", 90.005, 23.005), ("East", 90.035, 23.005)),
     )
     result, rankings, summary = build_neighborhood_similarity(cells, area)
     assert len(rankings) == 8
